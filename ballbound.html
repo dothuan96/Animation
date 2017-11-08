@@ -11,6 +11,8 @@
 	// http://www.html5canvastutorials.com/
 
 	var canvas = document.getElementById("canvas");
+  /*canvas.width  = window.innerWidth;    //adjust dimension of canvas = browser
+  canvas.height = window.innerHeight;*/
 	var ctx = canvas.getContext("2d");
 
     var Ball = {
@@ -70,7 +72,8 @@
 
     function update()   //main function
    {
-    ctx.clearRect(0,0,450,450);  //clear old ball when new ball appear (avoid delay)
+    //ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, 450, 450);  //clear old ball when new ball appear (avoid delay)
     ctx.fillStyle = "ivory";
     ctx.fillRect(0, 0, 450, 450);  //fill background color
 
