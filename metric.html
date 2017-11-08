@@ -18,9 +18,8 @@
         char: '',
         init: function()
         {
-          this.x = Math.random() * canvas.width;
-          //this.char = "\'" + Math.random().toString(36).substring(1) + "\'";
-          this.char = "\'" + this.possible.charAt(Math.floor(Math.random() * 36)) + "\'";
+          //this.x = Math.random() * canvas.width;
+          this.char = this.possible.charAt(Math.floor(Math.random() * 36));
         },
         create_character: function()
         {
@@ -30,7 +29,7 @@
         },
         drop: function()
         {
-          this.y += 15;
+          this.y += 18;
         }
       };
 
@@ -38,6 +37,7 @@
 
       function update()
       {
+        Char.init();
         Char.create_character();
         Char.drop();
 
