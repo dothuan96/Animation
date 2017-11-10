@@ -1,55 +1,69 @@
 body {
-  margin: 0 auto;
+  margin: 0;
 }
 
-#black_tab {
+.header_tab {
+  width: 100%;
+  height: 64px;
+  margin: 0;
   width: 100%;
   height: 64px;
   background-color: #333;
+  position: relative;
 }
 
-.header_tab .web_logo {
+.containner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.29032%;
+  text-align: left;
+}
+
+.web_logo {
   position: absolute;
-  float: left;
-  display: table-cell;
   margin-right: 10px;
-  vertical-align: top;
   padding-top: 5px;
+  vertical-align: top;
+}
+
+.nav_black {
+  width: auto;
+  float: right;
+  display: table-cell;
+  max-width: 80%;
+  height: 64px;
 }
 
 .nav ul.list {
-  display: table-cell;
   height: 64px;
-  margin: 0;
   width: auto;
-  float: right;
-  list-style-type: none;
-  position: absolute;
-  font-style: normal;
-  font-weight: normal;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.nav_part {
+ul.list> li {
   float: left;
   display: table;
-  table-layout: fixed;
   height: 100%;
-  width: auto;
+  table-layout: fixed;
+  list-style: none;
 }
 
-.nav_part .nav_link {
-  color: white;
-  font-family: "LG Smart Light", Tahoma, Arial, sans-serif;
-  font-size: 22px;
+ul.list>li a.nav_link {
+  max-width: 200px;
+  display: table-cell;
   padding: 0 20px;
-  text-decoration: none;
+  line-height: 20px;
+  font-size: 22px;
+  width: auto;
+  height: 100%;
   vertical-align: middle;
   text-align: center;
+  text-decoration: none;
 }
 
-.nav .nav_link:hover {
-    background-color: #d7dde6;
-    text-shadow: none;
-    color:black;
+a {
+  font-family: "LG Smart Light",Tahoma,Arial,sans-serif !important;
+  color: #fff !important;
 }
