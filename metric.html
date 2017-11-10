@@ -2,24 +2,26 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-15">
   </head>
-  <body>
+  <body style="margin: 0;">
     <canvas id="canvas" width="300" height="300"></canvas>
     <script>
       var canvas = document.getElementById("canvas");
       canvas.width = window.innerWidth;    //adjust dimension of canvas = browser
       canvas.height = window.innerHeight;
+
       var ctx = canvas.getContext("2d");
 
       var character = {
-        x: 0,
-        y: 0,
-        sy: 0,  //speed of character on Y-axis
-        possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+        x: 100,
+        y: 100,
+        sy: 2,  //speed of character on Y-axis
+        possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz",
         char: '',
+        //row: [],
         init: function()
         {
           //this.x = Math.random() * canvas.width;
-          this.char = this.possible.charAt(Math.floor(Math.random() * 36));
+          this.char = this.possible.charAt(Math.floor(Math.random() * this.possible.length));  //random characters
         },
         create_character: function()
         {
@@ -29,19 +31,19 @@
         },
         drop: function()
         {
-          this.y += 18;
+          this.y += 20;
         }
       };
-
       var Char = Object.create(character);
 
       function update()
       {
         Char.init();
         Char.create_character();
-        Char.drop();
+        //Char.drop();
 
-        window.requestAnimationFrame(update);
+        setTimeout(update, 500);
+        //window.requestAnimationFrame(update);
       }
       update();
     </script>

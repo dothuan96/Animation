@@ -6,8 +6,6 @@ body {
   width: 100%;
   height: 64px;
   margin: 0;
-  width: 100%;
-  height: 64px;
   background-color: #333;
   position: relative;
 }
@@ -50,12 +48,13 @@ ul.list> li {
   list-style: none;
 }
 
-ul.list>li a.nav_link {
+ul.list> li a.nav_link {
   max-width: 200px;
   display: table-cell;
   padding: 0 20px;
-  line-height: 20px;
+  line-height: 22px;
   font-size: 22px;
+  font-weight: normal;
   width: auto;
   height: 100%;
   vertical-align: middle;
@@ -65,5 +64,47 @@ ul.list>li a.nav_link {
 
 a {
   font-family: "LG Smart Light",Tahoma,Arial,sans-serif !important;
-  color: #fff !important;
+  color: #fff;
+}
+
+.nav_part .nav_link:hover{
+  background-color: #d9dbe0;
+  color: #333;
+}
+
+.red_tab {
+  width: 100%;
+  height: 38px;
+  margin: 0;
+  background-color: #a50034;
+  position: relative;
+  opacity: .9;
+  min-width: 768px;
+}
+
+ul.global {
+  padding: 0;
+  margin: 0;
+  float: right;
+  list-style: none;
+  padding-right: 15px;
+  line-height: 38px;
+  font-style: normal;
+  vertical-align: top;
+}
+
+ul.global> li a.language {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: auto;
+}
+
+i.fa {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+li a.language:hover {
+  color: #d9dbe0;
+  text-decoration: underline;
 }
