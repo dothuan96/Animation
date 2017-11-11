@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #fff;
 }
 
 .header_tab {
@@ -99,7 +100,7 @@ ul.global> li a.language {
   font-size: auto;
 }
 
-i.fa {
+.fa-globe {
   font-size: 25px;
   margin-right: 5px;
 }
@@ -107,4 +108,35 @@ i.fa {
 li a.language:hover {
   color: #d9dbe0;
   text-decoration: underline;
+}
+
+.video {
+  margin: 0 auto;
+  margin-top: 8px;
+  border: 1px solid #949494;
+  max-width: 1600px;
+}
+
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.btn-mute {
+  top: 200px;
+  font-size: 20px;
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.btn-mute.off {
+  background: url(http://www.lg.com/global/img/homepage/sound_off.png) no-repeat;
+}
+
+.btn-mute:hover {
+  background-position: 0 bottom;
+  background: url(http://www.lg.com/global/img/homepage/sound_on.png) no-repeat;
 }
