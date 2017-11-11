@@ -12,25 +12,26 @@
       var ctx = canvas.getContext("2d");
 
       var character = {
-        x: 100,
-        y: 100,
+        x: 0,
+        y: 0,
         sy: 2,  //speed of character on Y-axis
         possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz",
-        char: '',
-        //row: [],
         init: function()
         {
-          //this.x = Math.random() * canvas.width;
-          this.char = this.possible.charAt(Math.floor(Math.random() * this.possible.length));  //random characters
+          this.x = Math.random() * canvas.width;
         },
         create_character: function()
         {
           ctx.font = "20px courier";  //create a text with size and font
           ctx.fillStyle = "green";    //change color before fill text
-          ctx.fillText(this.char, this.x, this.y);
+          ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
         },
         drop: function()
         {
+          if(this.y > canvas.height) {
+            this.init();
+            this.y = 0;
+          }
           this.y += 20;
         }
       };
@@ -38,11 +39,9 @@
 
       function update()
       {
-        Char.init();
         Char.create_character();
-        //Char.drop();
-
-        setTimeout(update, 500);
+        Char.drop();
+        setTimeout(update, 200);
         //window.requestAnimationFrame(update);
       }
       update();
