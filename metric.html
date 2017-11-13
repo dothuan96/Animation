@@ -13,34 +13,70 @@
 
       var character = {
         x: 0,
-        y: 0,
-        sy: 2,  //speed of character on Y-axis
+        y: -30,
+        sy: 0,  //speed of character on Y-axis
         possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz",
         init: function()
         {
           this.x = Math.random() * canvas.width;
+          this.sy = Math.random() * (20-15) + 15;  //the space betweent 2nd character appear low or fast
         },
         create_character: function()
         {
-          ctx.font = "20px courier";  //create a text with size and font
-          ctx.fillStyle = "green";    //change color before fill text
-          ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
+          for(var a=0; a<15; a++) //height of columm
+          {
+            ctx.font = "20px courier";  //create a text with size and font
+            if(this.a == 14) {
+              ctx.fillStyle = 'rgb(255, 255, 255)';
+            }
+            else {
+              ctx.fillStyle = 'rgb(0,'+ a*18 +',0)';    //change color before fill text
+            }
+            ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
+
+
+            this.drop();
+          }
         },
         drop: function()
         {
           if(this.y > canvas.height) {
             this.init();
-            this.y = 0;
+            this.y = -30;
           }
-          this.y += 20;
+          this.y = this.y + this.sy;
+        },
+        change: function()
+        {
+          this.create_character();
+          this.y= this.y - (15*this.sy - this.sy); //write overlap
         }
       };
-      var Char = Object.create(character);
+      //var Char = Object.create(character);
+
+      var chars = [];
+      for(var i=0; i<5; i++) {
+        var c = Object.create(character);
+        c.init();
+        chars.push(c);
+      }
 
       function update()
       {
-        Char.create_character();
-        Char.drop();
+        //Char.create_character();
+        //Char.drop();
+        //ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        chars.forEach(function(c) {
+          for(var b=0; b<1; b++)
+          {
+            c.change();
+            c.drop();
+          }
+        });
+
         setTimeout(update, 200);
         //window.requestAnimationFrame(update);
       }
