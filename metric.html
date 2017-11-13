@@ -15,47 +15,49 @@
         x: 0,
         y: -30,
         sy: 0,  //speed of character on Y-axis
+        col: 0,
         possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz",
         init: function()
         {
           this.x = Math.random() * canvas.width;
           this.sy = Math.random() * (20-15) + 15;  //the space betweent 2nd character appear low or fast
+          this.col =  Math.random()*(30-10) + 5;
         },
         create_character: function()
         {
-          for(var a=0; a<15; a++) //height of columm
+          for(var a=0; a<this.col-1; a++) //height of columm
           {
             ctx.font = "20px courier";  //create a text with size and font
-            if(this.a == 14) {
-              ctx.fillStyle = 'rgb(255, 255, 255)';
-            }
-            else {
-              ctx.fillStyle = 'rgb(0,'+ a*18 +',0)';    //change color before fill text
-            }
+            ctx.fillStyle = 'rgb(0,'+ a*18 +',0)';    //change color before fill text
             ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
-
 
             this.drop();
           }
+
+          //first character is white
+          ctx.font = "20px courier";
+          ctx.fillStyle = 'white';
+          ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
+          this.drop();
         },
         drop: function()
         {
-          if(this.y > canvas.height) {
-            this.init();
+          if(this.y > (canvas.height + this.col*this.sy)) {
             this.y = -30;
+            this.init();
           }
           this.y = this.y + this.sy;
         },
         change: function()
         {
           this.create_character();
-          this.y= this.y - (15*this.sy - this.sy); //write overlap
+          this.y= this.y - (this.col*this.sy - this.sy); //write overlap
         }
       };
       //var Char = Object.create(character);
 
       var chars = [];
-      for(var i=0; i<5; i++) {
+      for(var i=0; i< Math.random()*(80-40) + 40; i++) {
         var c = Object.create(character);
         c.init();
         chars.push(c);
@@ -77,7 +79,7 @@
           }
         });
 
-        setTimeout(update, 200);
+        setTimeout(update, 100);
         //window.requestAnimationFrame(update);
       }
       update();
