@@ -20,7 +20,7 @@
         init: function()
         {
           this.x = Math.random() * canvas.width;
-          this.sy = Math.random() * (20-15) + 15;  //the space betweent 2nd character appear low or fast
+          this.sy = Math.random() * (20-15) + 15;  //random the space betweent 2nd character appear low or fast
           this.col =  Math.random()*(30-10) + 5;
         },
         create_character: function()
@@ -42,22 +42,22 @@
         },
         drop: function()
         {
-          if(this.y > (canvas.height + this.col*this.sy)) {
-            this.y = -30;
+          if(this.y > (canvas.height + this.col*this.sy)) {  //make sure all of character have y> window.height
+            this.y = -30;  //reset y to make new columm
             this.init();
           }
-          this.y = this.y + this.sy;
+          this.y = this.y + this.sy;  //if columms have small space then it will shorter and run "lower" / or need much time to reach the bottom
         },
         change: function()
         {
           this.create_character();
-          this.y= this.y - (this.col*this.sy - this.sy); //write overlap
+          this.y= this.y - (this.col*this.sy - this.sy); //write overlap that "lower" exactly 1 character (based on font size)
         }
       };
       //var Char = Object.create(character);
 
       var chars = [];
-      for(var i=0; i< Math.random()*(80-40) + 40; i++) {
+      for(var i=0; i< Math.random()*(80-40) + 40; i++) {  //the length of row
         var c = Object.create(character);
         c.init();
         chars.push(c);
@@ -70,7 +70,7 @@
         //ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);  //fill window black anytime run
         chars.forEach(function(c) {
           for(var b=0; b<1; b++)
           {
