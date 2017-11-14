@@ -16,26 +16,28 @@
         y: -30,
         sy: 0,  //speed of character on Y-axis
         col: 0,
+        size: 0,
         possible: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz",
         init: function()
         {
           this.x = Math.random() * canvas.width;
-          this.sy = Math.random() * (20-15) + 15;  //random the space betweent 2nd character appear low or fast
-          this.col =  Math.random()*(30-10) + 5;
+          this.col =  Math.random()*(30-10) + 10;
+          this.size = Math.random()*(30-15) + 15;
+          this.sy = Math.random() * ((this.size-2)-(this.size-7)) + (this.size-7);  //random the space betweent 2nd character appear low or fast based on the font size
         },
         create_character: function()
         {
           for(var a=0; a<this.col-1; a++) //height of columm
           {
-            ctx.font = "20px courier";  //create a text with size and font
             ctx.fillStyle = 'rgb(0,'+ a*18 +',0)';    //change color before fill text
+            ctx.font = this.size + "px courier";  //create a text with size and font
             ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
 
             this.drop();
           }
 
           //first character is white
-          ctx.font = "20px courier";
+          ctx.font = this.size + "px courier";
           ctx.fillStyle = 'white';
           ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
           this.drop();
@@ -57,7 +59,7 @@
       //var Char = Object.create(character);
 
       var chars = [];
-      for(var i=0; i< Math.random()*(80-40) + 40; i++) {  //the length of row
+      for(var i=0; i< Math.random()*(70-40) + 40; i++) {  //the length of row
         var c = Object.create(character);
         c.init();
         chars.push(c);
@@ -67,8 +69,8 @@
       {
         //Char.create_character();
         //Char.drop();
-        //ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);  //fill window black anytime run
         chars.forEach(function(c) {
