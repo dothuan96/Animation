@@ -31,14 +31,16 @@
           {
             ctx.fillStyle = 'rgb(0,'+ a*18 +',0)';    //change color before fill text
             ctx.font = this.size + "px LG Smart";  //create a text with size and font
+            ctx.textAlign = "center";
             ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
 
             this.drop();
           }
 
           //first character is white
-          ctx.font = this.size + "px courier";
+          ctx.font = this.size + "px LG Smart";
           ctx.fillStyle = 'white';
+          ctx.textAlign = "center";
           ctx.fillText(this.possible.charAt(Math.floor(Math.random() * this.possible.length)), this.x, this.y);
           this.drop();
         },
@@ -59,7 +61,7 @@
       //var Char = Object.create(character);
 
       var chars = [];
-      for(var i=0; i< Math.random()*(60-30) + 30; i++) {  //the length of row
+      for(var i=0; i< Math.random()*(80-30) + 30; i++) {  //the length of row
         var c = Object.create(character);
         c.init();
         chars.push(c);
