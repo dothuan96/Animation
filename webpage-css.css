@@ -145,51 +145,133 @@ video {
   margin: 8px auto;
 }
 
-.module {
+.homepage-content .hc-wrap {
   position: relative;
-  min-width: 768px;
-  overflow: hidden;
-  clear: both;
   max-width: 1600px;
+  margin: 0 auto;
+}
+
+.homepage-content .hc-wrap .image-box {
+  width: 28.125%;
+  position: absolute
+}
+
+.homepage-content .hc-wrap .cont-box {
+  position: relative
+}
+
+.homepage-content .hc-wrap .cont-box .caption {
+  position: absolute;
+  width: 91.205%;
+  background: rgba(51,51,51,.7);
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  text-align: left;
+  line-height: 24px;
+  min-height: 24px;
+  font-size: 18px;
+  padding: 4px 4.4%;
+}
+
+.homepage-content .hc-wrap .wide {
+  width: 42.75%;
+  position: relative;
+  background: #000
+}
+
+.homepage-content .hc-wrap .wide .caption {
+  padding: 4px 4.4%
 }
 
 .homepage-content.wide-left .wide {
   left: 0;
+  top: 0
+}
+
+.homepage-content.wide-left .image-1 {
+  right: 28.625%;
   top: 0;
+  z-index: 2
 }
 
-.row-content1 .section-image {
-  width: 42.75%;
-  position: relative;
-  background: #000;
+.homepage-content.wide-left .image-2 {
+  right: 0;
+  top: 0
 }
 
-.image1 {
-  width: 100%;
-  position: relative;
+.homepage-content.wide-right .wide {
+  right: 0;
+  top: 0;
+  position: absolute
 }
 
-img {
-  height: auto;
-  vertical-align: middle;
-}
-
-.content-box .caption {
-  line-height: 24px;
-  min-height: 24px;
-}
-
-.caption {
-  font-size: 18px;
-  padding: 4px 4.4%;
-  margin : 0;
-  position: absolute;
-  width: 100%;
+.homepage-content.wide-right .image-1 {
   left: 0;
-  bottom: 0;
-  background: rgba(51,51,51,.7);
-  color: #fff;
-  text-align: left;
+  top: 0;
+  position: relative
+}
+
+.homepage-content.wide-right .image-2 {
+  left: 28.625%;
+  top: 0
+}
+
+.homepage-content a:hover .caption {
+  text-decoration: underline;
+  color: #CCC!important
+}
+
+img.lazy {
+  width: 100%;
+  vertical-align: middle;
+  min-height: auto;
+}
+
+h2.caption {
+  margin: 0;
+  padding: 0;
   font-family: "LG Smart Light",Tahoma,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  float: left;
+  width: 100%;
+  line-height: 27px;
+  padding: 13px 0 17px;
+}
+
+.top-bar a {
+  color: #fff;
+}
+
+.top-bar> .container {
+  content: "";
+  display: table;
+  clear: both;
+  font-family: "LG Smart Light",Tahoma,Arial,sans-serif;
+  font-size: 16px;
+  padding: 0 1.29032%;
+}
+
+.top-bar .country-select {
+  float: left;
+  line-height: 1;
+  padding-top: 8px;
+}
+
+.top-bar .country-select a {
+  font-weight: bold;
+  padding-left: 5px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.top-bar .country-select a:hover {
+  text-decoration: underline;
+  color: #CCC;
 }
