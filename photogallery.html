@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .image {
+        height: 100px;
+        width: auto;
+        border: 5px solid lightgray;
+        margin: 6px 3px;
+        transition: all 500ms cubic-bezier(1.000, -0.385, 0.185, 1.300);
+      }
+
+      .left {
+        transform: rotate(6deg);
+      }
+
+      .right {
+        transform: rotate(-6deg);
+      }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+
+      .modal-content {
+        width: 100%;
+        max-width: 700px;
+        /*make image in center vertically and horizontally*/
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .left:hover {
+        transform: rotate(-2deg);
+      }
+
+      .right:hover {
+        transform: rotate(2deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img class="image left" src="https://pbs.twimg.com/media/CuOU63FXgAAwLvE.jpg" alt="">
+      <img class="image right" src="https://static.zerochan.net/Fate.Apocrypha.full.1719915.jpg" alt="">
+      <img class="image left" src="https://danbooru.donmai.us/data/__lancer_of_black_fate_apocrypha_fate_grand_order_and_fate_series_drawn_by_hiyokomame_dx__b458ab8b697748792657cfd81f31b00b.jpg" alt="">
+      <img class="image right" src="https://i.pinimg.com/736x/34/5f/22/345f22203d0a5ab9d8b7517c5f4fcc99.jpg" alt="">
+      <img class="image left" src="http://i.imgur.com/z26jRBv.png" alt="">
+      <img class="image right" src="https://pm1.narvii.com/5924/e000a0fe1c4577ba79e427da51e95daf3942b8f5_hq.jpg" alt="">
+      <img class="image left" src="https://78.media.tumblr.com/1e4a3ee8360353b63328c62c25d63965/tumblr_oqinlnPzFP1v9vqyzo1_500.jpg" alt="">
+
+      <img class="image right" src="http://www.chainpixel.com/wp-content/uploads/2017/08/wallpaper-ia6nk4ervq-chainpixel.com-730x451.jpg" alt="">
+      <img class="image left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Fy65_MRXfgo5bAqok_dU3TvrSuBHtqbv4hW977EbDi1c-Z66" alt="">
+      <img class="image right" src="https://static.zerochan.net/Red.Lancer.full.2108988.jpg" alt="">
+      <img class="image left" src="https://images8.alphacoders.com/858/858689.jpg" alt="">
+      <img class="image right" src="https://pm1.narvii.com/5781/ccf5075d3b679b03c704a5d486228f09a4583115_hq.jpg" alt="">
+      <img class="image left" src="http://livedoor.blogimg.jp/fategrand/imgs/a/3/a3b8369b.jpg" alt="">
+      <img class="image right" src="https://static.zerochan.net/Red.Assassin.full.1974682.jpg" alt="">
+    </div>
+
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="imgzoom" src="" alt="">
+    </div>
+
+    <script type="text/javascript">
+      var images = document.getElementsByClassName('image');   /*all classname are stored to an array*/
+      var modal = document.getElementById('myModal');
+
+      for(var i=0; i<images.length; i++)
+      {
+        images[i].onclick = function() {
+          modal.style.display = "block"; /*get the modal*/
+          document.getElementById('imgzoom').src = this.src; /*change url of image-modal to image-original*/
+        }
+      }
+
+      /*click to "disappear" modal*/
+      modal.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
