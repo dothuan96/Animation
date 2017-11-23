@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        background-color: #D4D4D4;
+      }
+
+      .image-slide {
+        background-color: #F6F7F2;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        position: relative;
+        padding: 30px;
+      }
+
+      .image-content {
+        position: relative;
+        width: 500px;
+        height: 281.108px;
+        overflow: hidden;
+      }
+
+      img {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        transition: all 1000ms cubic-bezier(0.790, 0.010, 0.270, 0.995);
+      }
+
+      .btn {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      button {
+        padding: 5px;
+        width: 100px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-slide">
+      <div class="image-content">
+        <img  class="image" src="https://initiate.alphacoders.com/images/792/cropped-1366-768-792734.jpg?263" alt="">
+        <img  class="image" src="https://initiate.alphacoders.com/images/830/cropped-1366-768-830685.png?7831" alt="">
+        <img class="image" src="https://initiate.alphacoders.com/images/825/cropped-1366-768-825606.png?1656" alt="">
+        <img class="image" src="https://initiate.alphacoders.com/images/751/cropped-1366-768-751028.jpg?7956" alt="">
+      </div>
+
+      <div class="btn">
+        <button type="button" name="button left" onclick="left()">Left</button>
+        <button type="button" name="button right" onclick="right()">Right</button>
+      </div>
+    </div>
+
+    <script>
+      var b=0; //count the position of image on screen in number (-2, -1, 0, 1, 2,...)
+      var pos=0; //position of image based on pixel
+      var images = document.getElementsByClassName('image'); //store all image in an array
+      for(var i=0; i<images.length; i++) {   //set position for each image
+        images[i].style.left = i*500 + "px";
+      }
+
+      function right() {
+        if(b <= 0 && b > (images.length - images.length*2 + 1)) { //only execute if the position of last image is 0 on screen and position of first image > (-array.length + 1)
+          for(var a=0; a<images.length; a++) {  //a is the position of image in array
+            images[a].style.left = (b*500 - 500) + "px";
+            b++;
+          }
+          b = b - images.length -1; //reset b based on first image
+          }
+        }
+
+      function left() { //only execute if the position of first image is negative, that's mean if the position of first image on screen is 0 then cannot execute
+        if(b < 0) {
+          for(var a=0; a<images.length; a++) {
+            images[a].style.left = (b*500 + 500) + "px";
+            b++;
+          }
+          b = b - images.length + 1;
+          }
+        }
+    </script>
+  </body>
+</html>
