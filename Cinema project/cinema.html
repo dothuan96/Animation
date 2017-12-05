@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Z Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="cinema.css">
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div id="header-part" class="container-fluid">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc" onclick="showmenu()">
+              <a href="#" class="ava-acc">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Booking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Delivery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Delivery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Help</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="#" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">Alpha Movies</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Content-->
+    <main>
+      <div id="content-part" class="container-fluid">
+        <div class="content">
+          <div class="movie-slide">
+            <div class="wallpaper">
+              <img class="" src="theAssassin.jpg" alt="">
+              <img class="" src="skyfall_xlg.jpg" alt="">
+              <img class="" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
+            </div>
+            <div class="container">
+
+                <div class="sm-wallpaper">
+                  <img class="image" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
+                  <img class="image" src="skyfall_xlg.jpg" alt="">
+                  <img class="image" src="theAssassin.jpg" alt="">
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      function showmenu() {
+        document.getElementById("col-menu").classList.toggle("show-menu");
+      }
+    </script>
+  </body>
+</html>

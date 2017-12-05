@@ -1,0 +1,10 @@
+body {
+  background-color: ivory;
+}
+
+.content {
+  background-color: lightgray;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}

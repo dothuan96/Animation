@@ -1,0 +1,74 @@
+img {
+  margin: 10px;
+  height: 230px;
+  width: auto;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+.nice-border {
+  border: 1px solid darkgray;
+}
+
+.foo {
+  clear: both;
+}
+
+.menu {
+  background-color: #65878F;
+  border: 3px solid #282830;
+  width: auto;
+}
+
+.menu-part {
+  float: left;
+  margin: 3px;
+  border: 3px solid #E7E7E7;
+}
+
+.list {
+  list-style: none;
+  margin: auto;
+}
+
+.part {
+  float: left;
+  margin: 0;
+  color: #E7E7E7;
+  text-align: center;
+  width: 33.33%;
+  line-height: 50px;
+}
+
+.part:hover {
+  background-color: #E7E7E7;
+  color: #25373D;
+}
+
+.login {
+  margin: 10px;
+  margin-top: 0;
+  padding: 10px;
+  background-color: #8199A3;
+}
+
+.input-gr {
+  margin-bottom: 5px;
+}
+
+.input-gr input {
+  width: 100%;
+}
+
+.signup {
+  float: right;
+}
+
+a {
+  text-decoration: none;
+  color: #282830;
+  font-weight: bold;
+}

@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 18px;
+  color: #bcbcbc;
+}
+
+#header-part.container-fluid {
+  background-color: #1f2324;
+  position: relative;
+  padding: 32px 0 22px 0;
+  display: flex;
+  z-index: 10;
+}
+
+.container {
+  padding: 0;
+  text-align: left;
+  position: relative;
+}
+
+#header-part div.nav-bar {
+  margin: 0;
+  width: auto;
+  float: right;
+}
+
+#header-part nav.navbar {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 20px 40px 0 0;
+  padding: 0;
+}
+
+#header-part nav.navbar ul.navbar-nav {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#header-part nav.navbar ul.navbar-nav li {
+  text-transform: none;
+    padding: 0;
+    margin: 0 15px 0 0;
+    display:inline-block;
+	  list-style:none;
+}
+
+body a {
+  transition: all 300ms ease;
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+#header-part nav.navbar ul.navbar-nav li a {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #747a7c;
+  position: relative;
+  text-decoration: none;
+}
+
+#header-part div.avatar-acc {
+  line-height: 15px;
+  text-transform: uppercase;
+  position: relative;
+  float: right;
+  display: flex;
+}
+
+#header-part div.avatar-acc a.ava-acc {
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  float: left;
+  text-decoration: none !important;
+}
+
+#header-part div.ava {
+  font-size: 25px;
+  line-height: 51px;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background: #2bbfbd;
+  position: relative;
+  top: 3px;
+  color: #fff;
+  margin-right: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+#header-part div.avatar-acc i.fa-sort-desc {
+  font-size: 13px;
+  color: #514c56;
+  margin-left: 15px;
+  position: relative;
+  top: -2px;
+}
+
+#header-part div.avatar-acc a.ava-acc:hover {
+  color: #2bbfbd;
+  transition: all 300ms ease;
+}
+
+#header-part nav.navbar ul.navbar-nav li a:hover {
+  color: #fff;
+  transition: all 300ms ease;
+}
+
+#header-part div.avatar-acc div.drop-down {
+  position: absolute;
+  left: auto;
+  right: 0;
+  margin: 76px 0 0 0;
+  padding: 34px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+}
+
+.drop {
+  top: -24px;
+  height: 0;
+  transition: all 500ms ease-out;
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+
+.show-menu {
+  top: 0px;
+  height: auto;
+  transform: rotateX(0deg);
+}
+
+#header-part div.avatar-acc div.drop-down .nav-link {
+  padding: 0 0 6px 0;
+  line-height: 18px;
+}
+
+#header-part div.avatar-acc div.drop-down li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2b292d;
+}
+
+#header-part div.avatar-acc div.drop-down li a:hover {
+  color: #2bbfbd;
+  transition: all 300ms ease;
+}
+
+#header-part div.logo {
+  width: auto;
+  float: left;
+}
+
+#header-part div.logo a.direct-home {
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#header-part div.logo i.fa-ticket {
+  font-size: 51px;
+  line-height: 51px;
+  position: relative;
+  margin-right: 15px;
+  vertical-align: sub;
+}
+
+#header-part div.logo div.logo-text {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#header-part div.logo span.logo-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#header-part div.logo span.logo-slogan {
+  display: block;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+#content-part.container-fluid {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#content-part div.movie-slide {
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+#content-part div.movie-slide div.wallpaper img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  transition: all 300ms ease;
+}
+
+#content-part div.movie-slide .sm-wallpaper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  top: calc(800px - 120px);
+}
+
+#content-part div.movie-slide div.sm-wallpaper img.image {
+  width: 33.3333%;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: top;
+  float: left;
+  position: relative;
+  transition: all 300ms ease;
+  top: 40px;
+}
+
+#content-part div.movie-slide div.sm-wallpaper img:hover {
+  top: 0;
+}
