@@ -5,12 +5,16 @@ body {
   background-color: #1f2324;
 }
 
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
 #header-part.container-fluid {
   background-color: #1f2324;
   position: relative;
   padding: 32px 0 22px 0;
   display: flex;
-  z-index: 10;
 }
 
 .container {
@@ -135,7 +139,7 @@ a:focus {
   text-transform: uppercase;
   background: #fff;
   border: 1px solid #e3e3e3;
-  z-index: 5;
+  z-index: 2;
 }
 
 .drop {
@@ -173,14 +177,14 @@ a:focus {
   float: left;
 }
 
-#header-part div.logo a.direct-home {
+#header-part div.logo a.direct-home, #footer-part div.copyright div.logo a.direct-home {
   color: #fff;
   text-align: left;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-#header-part div.logo i.fa-ticket {
+#header-part div.logo i.fa-ticket, #footer-part div.copyright div.logo i.fa-ticket {
   font-size: 51px;
   line-height: 51px;
   position: relative;
@@ -188,19 +192,19 @@ a:focus {
   vertical-align: middle;
 }
 
-#header-part div.logo div.logo-text {
+#header-part div.logo div.logo-text, #footer-part div.copyright div.logo div.logo-text {
   width: auto;
   height: auto;
   display: inline-block;
   vertical-align: middle;
 }
 
-#header-part div.logo span.logo-name {
+#header-part div.logo span.logo-name, #footer-part div.copyright div.logo span.logo-name {
   font-size: 28px;
   font-weight: bold;
 }
 
-#header-part div.logo span.logo-slogan {
+#header-part div.logo span.logo-slogan, #footer-part div.copyright div.logo span.logo-slogan {
   display: block;
   font-size: 11px;
   font-weight: 300;
@@ -217,7 +221,6 @@ a:focus {
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: 1;
 }
 
 #content-part section.movie-slide div.wallpaper img {
@@ -233,7 +236,6 @@ a:focus {
   height: 250px;
   overflow: hidden;
   text-align: center;
-  z-index: 3;
   position: absolute;
   top: calc(800px - 120px);
 }
@@ -331,4 +333,125 @@ a:focus {
 
 .row-mov {
   opacity: 0;
+  top: -100px;
+}
+
+#footer-part div.sub-email {
+  background-color: #2f3537;
+  position: relative;
+  padding: 20px 0 14px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+#footer-part div.sub-email div.sub-input {
+  width: auto;
+  float: right;
+  position: relative;
+}
+
+#footer-part div.sub-email input {
+  box-sizing: border-box;
+  float: left;
+  height: 94px;
+  width: 379px;
+  padding: 32px 38px;
+  border: none;
+  background-color: #181b1b;
+  margin-bottom: 0;
+  text-transform: none;
+  color: #888889 !important;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+#footer-part div.sub-email button.btn {
+  margin-left: 32px;
+  padding: 32px 37px;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #2bbfbd;
+  color: #fff;
+  cursor: pointer;
+}
+
+#footer-part div.sub-email button:hover {
+  background-color: #2fa8d0;
+}
+
+#footer-part div.sub-email input, #footer-part button {
+  border-radius: 0;
+}
+
+#footer-part div.sub-email label {
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 27px;
+  margin-top: 27px;
+  margin-right: 30px;
+}
+
+#footer-part div.sub-email label i {
+  position: relative;
+  font-size: 40px;
+  line-height: 40px;
+  left: 0;
+  top: -3px;
+  margin-right: 18px;
+  display: block;
+  float: left;
+  color: #2bbfbd;
+}
+
+#footer-part div.info {
+  height: auto;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: flow-root;
+}
+
+#footer-part div.info div.social-contact {
+  width: auto;
+  float: right;
+  position: relative;
+  margin-top: 85px;
+}
+
+#footer-part div.info div.social-contact i {
+  font-size: 26px;
+  line-height: 26px;
+  color: #565f61;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: all 300ms ease;
+}
+
+#footer-part div.info div.social-contact i:hover {
+  color: #fff;
+}
+
+#footer-part div.info div.copyright {
+  position: relative;
+  float: left;
+  text-align: left;
+  width: 450px;
+}
+
+#footer-part div.info div.copyright p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 100;
+  margin-bottom: 20px;
 }
