@@ -2,14 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>A-Z Movies</title>
+    <title>Alpha Movies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!--Request font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
     <!--CSS link-->
     <link rel="stylesheet" type="text/css" href="cinema.css">
   </head>
@@ -80,29 +85,177 @@
     <main>
       <div id="content-part" class="container-fluid">
         <div class="content">
-          <div class="movie-slide">
+          <!--Image slide show-->
+          <section class="movie-slide">
             <div class="wallpaper">
-              <img class="" src="theAssassin.jpg" alt="">
-              <img class="" src="skyfall_xlg.jpg" alt="">
-              <img class="" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
+              <img class="slide" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
+              <img class="slide" src="skyfall_xlg.jpg" alt="">
+              <img class="slide" src="theAssassin.jpg" alt="">
             </div>
             <div class="container">
-
-                <div class="sm-wallpaper">
-                  <img class="image" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
-                  <img class="image" src="skyfall_xlg.jpg" alt="">
-                  <img class="image" src="theAssassin.jpg" alt="">
+              <div class="sm-wallpaper">
+                <div class="">
+                  <img class="image hide-top" onclick="currentSlide(1)" src="the-spongebob-movie-sponge-out-of-water-poster.jpg" alt="">
                 </div>
-              
+                <div class="">
+                  <img class="image hide-top" onclick="currentSlide(2)" src="skyfall_xlg.jpg" alt="">
+                </div>
+                <div class="">
+                  <img class="image hide-top" onclick="currentSlide(3)" src="theAssassin.jpg" alt="">
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+          <!--Current movie-->
+          <section class="best-movie">
+            <div class="container">
+              <h2>Best Movie</h2>
+              <!--Row 1-->
+              <div class="row row-mov">
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="cars_three.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Car 3</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="king_arthur_legend_of_the_sword_ver6.jpg" alt="">
+                  </div>
+                  <h5><a href="#">King Arthur</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="logan.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Logan</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="moana.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Moana</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+              </div>
+              <!--Row 2-->
+              <div class="row row-mov">
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="jungle_book.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Jungle Book</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="kong_skull_island.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Kong! Skull island</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="zootopia.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Zootopia</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="deadpool_ver4.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Deadpool</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+              </div>
+              <!--Row 3-->
+              <div class="row row-mov">
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="ghost_story.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Ghost story</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="coco_ver13.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Coco</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="wonder_woman_ver5.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Wonder woman</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+                <div class="col-sm-3">
+                  <div class="img-bor">
+                    <img src="manchester_by_the_sea.jpg" alt="">
+                  </div>
+                  <h5><a href="#">Manchester</a></h5>
+                  <time datetime="2017-01-01">2017</time>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
     <script type="text/javascript">
+      /*menu drop down*/
       function showmenu() {
         document.getElementById("col-menu").classList.toggle("show-menu");
       }
+
+      /*image slide*/
+      var slide_num = 1;
+      showSlide(slide_num);
+
+      function currentSlide(n) {
+        showSlide(slide_num = n);
+      }
+
+      function showSlide(n) {
+        var time;
+        var slides = document.getElementsByClassName('slide');
+        var images = document.getElementsByClassName('image');
+        if(slide_num>slides.length) {slide_num = 1}
+        if(slide_num<1) {slide_num = slides.length}
+        for(var i=0; i<slides.length; i++) {
+          slides[i].style.opacity = 0;  //hide all wallpaper by default
+        }
+        for (var i = 0; i < images.length; i++) {
+          images[i].className = images[i].className.replace("show-top", ""); //hide all by default
+        }
+        slides[slide_num-1].style.opacity = 1;  //show a image that clicked
+        images[slide_num-1].classList.add("show-top");  //add class .show-top to image that clicked
+        /***USE CLASSLST FOR CUBIC-BEIZER ACTIVATE***/
+
+        slide_num++;
+        time = 6000;
+        setTimeout(showSlide, time); //automatic slide each 6 second
+      }
+
+      /*Movie show when scroll down*/
+      /* Every time the window is scrolled ... */
+      $(window).scroll( function(){
+          /* Check the location of each desired element */
+          $('.row-mov').each( function(i){
+              var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+              var bottom_of_window = $(window).scrollTop() + $(window).height();
+              /* If the object is completely visible in the window, fade it in */
+              if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},2000);
+              }
+          });
+      });
     </script>
   </body>
 </html>
