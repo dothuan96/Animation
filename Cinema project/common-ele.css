@@ -32,6 +32,10 @@
   padding-top: 0;
 }
 
+.modal-backdrop {
+  z-index: 5;
+}
+
 .btn:focus, .btn:active, .form-control:focus, .form-control:active {
    outline: none !important;
    box-shadow: none;

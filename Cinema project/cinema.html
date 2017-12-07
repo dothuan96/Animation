@@ -24,6 +24,7 @@
     <!--Header-->
     <header>
       <div id="header-part" class="container-fluid">
+        <!--Black nav-->
         <div class="container">
           <!--Navigation bar-->
           <div class="nav-bar">
@@ -41,59 +42,34 @@
               <div id="col-menu" class="drop-down drop">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Booking</a>
+                    <a class="nav-link" href="#">Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Delivery</a>
+                    <a class="nav-link" href="#">Setting</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
                   </li>
                 </ul>
-              </div>
-              <!--Sign in modal-->
-              <div id="Sign-in" class="modal fade">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-
-                    </div>
-                    <div class="modal-body">
-                      <div class="logo-part">
-                        <i class="fa fa-ticket" aria-hidden="true"></i>
-                      </div>
-                      <input class="form-control" type="text" name="usernam" placeholder="User name">
-                      <input class="form-control" type="password" name="pass" placeholder="Password">
-                      <div class="btn-part">
-                        <div class="signin-btn"><button class="btn" type="button" name="button">Sign in</button></div>
-                        <a class="forgot-pass" href="#" data-dismiss="modal" data-toggle="modal" data-target="#Forgot-password">Forgot password?</a>
-                        <div class="connect-social">
-                          <i class="fa fa-facebook" aria-hidden="true"></i>
-                          <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <!--Navigation bar-->
             <nav class="navbar navbar-expand-sm">
               <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Booking</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Delivery</a>
+                  <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Help</a>
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
                 </li>
               </ul>
             </nav>
@@ -108,6 +84,12 @@
               </div>
             </a>
           </div>
+        </div>
+      </div>
+      <!--Blue navigation part-->
+      <div id="blue-nav" class="container-fluid">
+        <div class="">
+
         </div>
       </div>
     </header>
@@ -246,7 +228,7 @@
         <!--Subcribe email-->
         <div class="sub-email">
           <div class="container">
-            <label>
+            <label class="label-sub">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
               Subscribe to our newsletter to receive news, updates, and another stuff by email:
             </label>
@@ -282,18 +264,116 @@
       </div>
     </footer>
 
+    <!--Sign in modal-->
+    <div id="Sign-in" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+          </div>
+          <div class="modal-body">
+            <div class="logo-part">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+            </div>
+            <input class="form-control" type="text" name="usernam" placeholder="User name">
+            <input class="form-control" type="password" name="pass" placeholder="Password">
+            <div class="btn-part">
+              <div class="signin-btn"><button class="btn" type="button" name="button">Sign in</button></div>
+              <a class="forgot-pass" href="#" data-dismiss="modal" data-toggle="modal" data-target="#Forgot-password">Forgot password?</a>
+              <div class="connect-social">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Sign up modal-->
+    <div id="Sign-up" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+          </div>
+          <div class="modal-body">
+            <div class="logo-part">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+            </div>
+            <input class="form-control" type="text" name="usernam" placeholder="User name">
+            <input class="form-control" type="email" name="usernam" placeholder="Email">
+            <input class="form-control" type="password" name="pass" placeholder="Password">
+            <input class="form-control" type="password" name="pass" placeholder="Repeat Password">
+            <div class="btn-part">
+              <div class="signin-btn"><button class="btn" type="button" name="button">Register</button></div>
+              <div class="connect-social">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Forgot password modal-->
+    <div class="modal fade" id="Forgot-password">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+          </div>
+          <div class="modal-body">
+            <div class="logo-part">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+            </div>
+            <input class="form-control" type="text" name="usernam" placeholder="User name">
+            <input class="form-control" type="text" name="usernam" placeholder="Email">
+            <div class="signin-btn"><button id="verify-btn" class="btn" type="button" name="button" onclick="show_verify()">Get verification link</button></div>
+            <div id="flip" class="notify-verification">
+              <div class="notify">
+                The verification has been sent! <br>
+                Please check your email.
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript">
       /*menu drop down*/
       function showmenu() {
         document.getElementById("col-menu").classList.toggle("show-menu");
       }
 
+      /*Show verification message*/
+      function show_verify() {
+        document.getElementById("flip").classList.add("show-more");
+        document.getElementById("verify-btn").textContent = "Resend";
+      }
+
       /*image slide*/
       var slide_num = 1;
       showSlide(slide_num);
 
+      //set an interval by default
+      var times = setInterval(function () {
+        showSlide(slide_num++);
+      }, 6000);
+
       function currentSlide(n) {
         showSlide(slide_num = n);
+        clearInterval(times);  //clear interval when click any small poster, avoid time conflic when set time out
+        slide_num++;
+        time_loop = setTimeout(showSlide, 6000);  //run next wallpaper after next 6s
       }
 
       function showSlide(n) {
@@ -311,10 +391,6 @@
         slides[slide_num-1].style.opacity = 1;  //show a image that clicked
         images[slide_num-1].classList.add("show-top");  //add class .show-top to image that clicked
         /***USE CLASSLST FOR CUBIC-BEIZER ACTIVATE***/
-
-        slide_num++;
-        time = 6000;
-        setTimeout(showSlide, time); //automatic slide each 6 second
       }
 
       /*Movie show when scroll down*/
@@ -326,7 +402,20 @@
               var bottom_of_window = $(window).scrollTop() + $(window).height();
               /* If the object is completely visible in the window, fade it in */
               if( bottom_of_window > top_of_object + 100 ){
-                $(this).animate({opacity:'1', top: '0'}, 800);
+                $(this).animate({opacity:'1', top: '0'}, 600);
+              }
+          });
+      });
+
+      /*Subcribe animated*/
+      $(window).scroll( function(){
+          $('.label-sub').each( function(i){
+              var top_of_object = $(this).offset().top;
+              var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+              if( bottom_of_window > top_of_object ){
+                $(this).animate({opacity:'1', left: '0'}, 600);
+                $('.sub-input').animate({opacity:'1', left: '0'}, 600);
               }
           });
       });
