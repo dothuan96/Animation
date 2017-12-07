@@ -23,8 +23,8 @@
   <body>
     <!--Header-->
     <header>
+      <!--Black nav-->
       <div id="header-part" class="container-fluid">
-        <!--Black nav-->
         <div class="container">
           <!--Navigation bar-->
           <div class="nav-bar">
@@ -88,11 +88,94 @@
       </div>
       <!--Blue navigation part-->
       <div id="blue-nav" class="container-fluid">
-        <div class="">
-
+        <div class="container">
+          <div class="blue-content">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Theater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Scheduel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Review</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
+    <!--Black navigation with position fixed-->
+    <div id="header-part" class="container-fluid fixed-nav">
+      <div class="container">
+        <!--Navigation bar-->
+        <div class="nav-bar">
+          <div class="avatar-acc">
+            <a href="#" class="ava-acc" onclick="showmenu()">
+              <div class="ava">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <div class="acc" style="display: inline-block">
+                My account
+                <i class="fa fa-sort-desc" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!--Dropdown menu-->
+            <div id="col-menu" class="drop-down drop">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Setting</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Navigation bar-->
+          <nav class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--Logo-->
+        <div class="logo">
+          <a href="#" class="direct-home">
+            <i class="fa fa-ticket" aria-hidden="true"></i>
+            <div class="logo-text">
+              <span class="logo-name">Alpha Movies</span>
+              <span class="logo-slogan">The best online ticket store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!--Content-->
     <main>
@@ -419,6 +502,19 @@
               }
           });
       });
+
+      /*Navigation fixed position*/
+      $(window).scroll( function(){
+          $('.movie-slide').each( function(i){
+              var top_of_object = $(this).offset().top;
+              var top_of_window = $(window).scrollTop();
+
+              if( top_of_window > top_of_object ){
+                $(".fixed-nav").animate({top:'0'}, 800);
+              }
+          });
+      });
+
     </script>
   </body>
 </html>
