@@ -1,3 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #1f2324;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+body a {
+  transition: all 300ms ease;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+
 .modal {
   text-align: center;
 }
