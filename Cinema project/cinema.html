@@ -24,7 +24,7 @@
     <!--Header-->
     <header>
       <!--Black nav-->
-      <div id="header-part" class="container-fluid">
+      <div id="header-part" class="container-fluid relativ">
         <div class="container">
           <!--Navigation bar-->
           <div class="nav-bar">
@@ -485,7 +485,7 @@
               var bottom_of_window = $(window).scrollTop() + $(window).height();
               /* If the object is completely visible in the window, fade it in */
               if( bottom_of_window > top_of_object + 100 ){
-                $(this).animate({opacity:'1', top: '0'}, 600);
+                $(this).animate({opacity:'1', top: '0'}, 800);
               }
           });
       });
@@ -497,23 +497,37 @@
               var bottom_of_window = $(window).scrollTop() + $(window).height();
 
               if( bottom_of_window > top_of_object ){
-                $(this).animate({opacity:'1', left: '0'}, 600);
-                $('.sub-input').animate({opacity:'1', left: '0'}, 600);
+                $(this).animate({opacity:'1', left: '0'}, 800);
+                $('.sub-input').animate({opacity:'1', left: '0'}, 800);
               }
           });
       });
 
       /*Navigation fixed position*/
       $(window).scroll( function(){
-          $('.movie-slide').each( function(i){
-              var top_of_object = $(this).offset().top;
-              var top_of_window = $(window).scrollTop();
+        var top_of_object = $('.movie-slide').offset().top;
+        var top_of_window = $(window).scrollTop();
 
-              if( top_of_window > top_of_object ){
-                $(".fixed-nav").animate({top:'0'}, 800);
-              }
-          });
+        if( top_of_window > top_of_object ){
+          $(".fixed-nav").animate({top:'0', borderBottomWidth: '1px'}, 800);
+        }
+        /*else {
+          $(".fixed-nav").animate({top:'-112px', borderBottomWidth: '0'}, 800);
+        }*/
       });
+
+      /*This version do not need copy another black nav, but it's not smooth
+      $(window).scroll( function(){
+        var top_of_object = $('.movie-slide').offset().top;
+        var top_of_window = $(window).scrollTop();
+
+        if( top_of_window > top_of_object ){
+          $(".relativ").css({top: '-112px'});
+          $("#blue-nav").css({top: '112px'});
+          $(".relativ").animate({top:'0'}, 800);
+          $(".relativ").css({position: 'fixed'});
+        }
+      });*/
 
     </script>
   </body>
