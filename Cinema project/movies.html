@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Request font Roboto-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  <!--CSS link-->
+  <link rel="stylesheet" type="text/css" href="common-ele.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
+  <link rel="stylesheet" type="text/css" href="movies.css">
+</head>
+  <body>
+    <!--Header-->
+    <header>
+      <!--Black nav-->
+      <div id="header-part" class="container-fluid relativ">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">Alpha Movies</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Blue navigation part-->
+      <div id="blue-nav" class="container-fluid">
+        <div class="container">
+          <div class="blue-content">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Theater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Scheduel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Review</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!--Black navigation with position fixed-->
+      <div id="header-part" class="container-fluid fixed-nav">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">Alpha Movies</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Body part-->
+    <main>
+      <div id="movies">
+        <!--Current and Upcoming movies-->
+        <section class= "cur-upc container">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item nav-left" style="left: -150px;">
+              <a class="nav-link current active" data-toggle="tab" href="#cur-mov">
+                <h2>Current</h2>
+              </a>
+            </li>
+            <li class="nav-item nav-right" style="left: 150px;">
+              <a class="nav-link" data-toggle="tab" href="#up-mov">
+                <h2>Upcoming</h2>
+              </a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!--Current movies tab-->
+            <div id="cur-mov" class="container tab-pane fade show active" role="tabpanel"><br>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="001.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Car 3</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race.
+                        </p>
+                        <p>
+                          But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="002.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">King Arthur</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          Robbed of his birthright, Arthur comes up the hard way in the back alleys of the city.
+                          But once he pulls the sword from the stone, he is forced to acknowledge his true legacy - whether he likes it or not.
+                        </p>
+                        <p>
+                          The film stars Charlie Hunnam as the eponymous character...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="003.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Logan</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border.
+                        </p>
+                        <p>
+                          However, Logan's attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="004.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">Moana</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island,
+                          she answers the Ocean's call to seek out the Demigod to set things right.
+                        </p>
+                        <p>
+                          When a blight strikes her island, Moana sets sail in search of Maui, a legendary demigod...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="005.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Jungle Book</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          Favreau, Marks and producer Brigham Taylor developed the film's story as a balance between Disney's
+                          animated adaptation and Kipling's original works, borrowing elements from both into the film.
+                        </p>
+                        <p>
+                          Principal photography commenced in 2014, with filming taking place entirely in Los Angeles
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="006.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">Kong! Skull Island</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          A team of scientists explore an uncharted island in the Pacific, venturing into the domain of the mighty Kong, and must fight to escape a primal Eden.
+                        </p>
+                        <p>
+                          Principal photography took place from October 2015 to March 2016 in Hawaii and various locations around Vietnam.
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Upcoming movies tab-->
+            <div id="up-mov" class="container tab-pane fade" role="tabpanel"><br>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="007.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Zootopia</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.
+                        </p>
+                        <p>
+                          Zootopia premiered at the Brussels Animation Film Festival in Belgium on February 13, 2016,[8] and went into general...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="008.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">Deadpool</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.
+                        </p>
+                        <p>
+                          Deadpool is a 2016 American superhero film based on the Marvel Comics character...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="009.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Ghost Story</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          In this singular exploration of legacy, love, loss, and the enormity of existence,
+                          a recently deceased, white-sheeted ghost returns to his suburban home to try to reconnect with his bereft wife.
+                        </p>
+                        <p>
+                          A Ghost Story is a 2017 American supernatural drama film written and directed by David Lowery.
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="010.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">Coco</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          Aspiring musician Miguel, confronted with his family's ancestral ban on music,
+                          enters the Land of the Dead to find his great-great-grandfather, a legendary singer.
+                        </p>
+                        <p>
+                          Coco premiered on October 20, 2017 during the Morelia International Film Festival...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mov-info">
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor img-odd">
+                      <img src="011.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info">
+                      <h6><a href="#">Wonder Woman</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training,
+                          leaves home to fight a war, discovering her full powers and true destiny.
+                        </p>
+                        <p>
+                          Wonder Woman is a 2017 American superhero film based on the DC Comics character...
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="row smrow">
+                    <div class="col-sm-6 img-bor">
+                      <img src="012.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 info img-even">
+                      <h6><a href="#">Manchester</a></h6>
+                      <div class="mov-discribe">
+                        <p>
+                          A depressed uncle is asked to take care of his teenage nephew after the boy's father dies.
+                        </p>
+                        <p>
+                          The story takes place in the present while injecting the narrative with a series of flashbacks that inform the viewer about significant events from the past and the characters' motivations.
+                        </p>
+                      </div>
+                      <ul class="inline-list">
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                        <li class="fa fa-star" aria-hidden="true"></li>
+                      </ul>
+                      <a href="#" class="btn " role="button">View more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Top rate movies-->
+        <section id="top-rate" class="container-fluid">
+          <div class="container">
+            <h2>This week's most popular movies</h2>
+            <div class="row">
+            <div class="col-sm-3">
+              <div class="top-movbor mov-left">
+                <img src="014.jpg" alt="">
+              </div>
+              <div class="discr-mov">
+                <h5><a href="#">Big 6</a></h5>
+                <p>
+                  The special bond that develops between plus-sized inflatable robot Baymax,
+                  and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="top-movbor mov-left">
+                <img src="015.jpg" alt="">
+              </div>
+              <div class="discr-mov">
+                <h5><a href="#">Spectre</a></h5>
+                <p>
+                  A cryptic message from Bond's past, sends him on a trail to uncover a sinister organization.
+                  While M battles political forces to keep the Secret Service alive.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="top-movbor mov-right">
+                <img src="016.jpg" style="top: -64px;" alt="">
+              </div>
+              <div class="discr-mov">
+                <h5><a href="#">Joy</a></h5>
+                <p>
+                  Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="top-movbor mov-right">
+                <img src="017.jpg" style="top: -30px;" alt="">
+              </div>
+              <div class="discr-mov">
+                <h5><a href="#">Good Dinosaur</a></h5>
+                <p>
+                  In a world where dinosaurs and humans live side-by-side, an Apatosaurus named Arlo makes an unlikely human friend.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Footer part-->
+    <footer>
+      <div id="footer-part" class="container-fluid">
+        <!--Subcribe email-->
+        <div class="sub-email">
+          <div class="container">
+            <label class="label-sub">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              Subscribe to our newsletter to receive news, updates, and another stuff by email:
+            </label>
+            <div class="sub-input">
+              <input class="form-control" type="email" placeholder="Enter your email...">
+              <button type="button" class="btn">Subcribe</button>
+            </div>
+          </div>
+        </div>
+        <!--Contact information-->
+        <div class="container">
+          <div class="info">
+            <div class="social-contact">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="copyright">
+              <p>Alpha Movies is proudly powered by WordPress Entries (RSS) and Comments (RSS) Privacy Policy</p>
+              <div class="logo">
+                <a href="#" class="direct-home">
+                  <i class="fa fa-ticket" aria-hidden="true"></i>
+                  <div class="logo-text">
+                    <span class="logo-name">Alpha Movies</span>
+                    <span class="logo-slogan">The best online ticket store</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Scripts link-->
+    <script src="common-js.js" rel="stylesheet"></script>
+    <script src="movies.js" rel="stylesheet"></script>
+  </body>
+</html>

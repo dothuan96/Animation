@@ -1,0 +1,233 @@
+#movies section.cur-upc, #movies #top-rate {
+  padding-top: 90px;
+  padding-bottom: 86px;
+  position: relative;
+  width: 100%;
+}
+
+#movies ul.nav-tabs {
+  border-bottom: 0;
+  width: 100%;
+  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+}
+
+#movies a.nav-link {
+  padding: 0;
+  color: #747a7c;
+  text-align: center;
+}
+
+#movies a.nav-link:hover {
+  color: #fff;
+}
+
+#movies .nav-tabs .nav-link {
+  border: none;
+}
+
+#movies .nav-tabs .nav-item.show .nav-link, #movies .nav-tabs .nav-link.active {
+  color: #2bbfbd;
+  background-color: transparent;
+}
+
+#movies ul li {
+  position: relative;
+  opacity: 0;
+}
+
+#movies ul li a.current {
+  padding-right: 24px;
+}
+
+#movies ul li a h2, #top-rate h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+#movies .tab-content .row.mov-info {
+  width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  opacity: 0;
+}
+
+#movies .tab-content .row.smrow {
+  padding-right: 20px;
+}
+
+#movies .tab-content .col-sm-6 {
+  margin: 0 auto;
+  float: none;
+  min-width: 245px;
+}
+
+#movies .tab-content .col-sm-6.img-bor, #movies .tab-content .col-sm-6.info {
+  margin-bottom: 30px;
+}
+
+#movies .tab-content .col-sm-6.img-bor {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+#movies .tab-content .col-sm-6.info {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+#movies .tab-content img {
+  width: inherit;
+  height: auto;
+  transition: all 500ms ease;
+}
+
+#movies img:hover {
+  transform: scale(1.1);
+}
+
+#movies .tab-content .col-sm-6.info h6 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+#movies .tab-content .col-sm-6.info .mov-discribe {
+  width: 100%;
+  height: calc(100% - 149px);
+  overflow: hidden;
+}
+
+#movies .tab-content .col-sm-6.info p {
+  margin: 0px;
+  margin-top: 10px;
+  line-height: 1.375;
+  font-size: 16px;
+  font-weight: 300;
+  color: #b1b6b8;
+}
+
+#movies .tab-content .col-sm-6.info ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#movies .tab-content .col-sm-6.info li.fa {
+  color: #2bbfbd;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+#movies .tab-content .col-sm-6.info a.btn {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  background: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 180px;
+  min-width: 180px;
+  margin-top: 25px;
+  padding: 25px 0px;
+}
+
+#movies .tab-content .col-sm-6.info a.btn:hover {
+  background-color: #2bbfbd;
+  border-color: #2bbfbd;
+  color: #fff;
+}
+
+#movies .tab-content .fade {
+  transition: all 1000ms cubic-bezier(0.680, 0.055, 0.320, 0.995);
+}
+
+
+
+#top-rate.container-fluid {
+  background-color: #2bbfbd;
+  padding: 20px 0 20px 0;
+  display: flex;
+  position: relative;
+}
+
+#top-rate .row {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+#top-rate .row .col-sm-3 {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#top-rate .row .col-sm-3 .top-movbor {
+  min-width: 255px;
+  width: 100%;
+  height: 255px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #2bbfbd;
+  z-index: 1;
+}
+
+#top-rate .row .col-sm-3 img {
+  min-width: 255px;
+  width: inherit;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  transition: all 500ms ease;
+}
+
+#top-rate .row .col-sm-3 .discr-mov {
+  position: relative;
+  top: -160px;
+  opacity: 0;
+  z-index: 0;
+}
+
+#top-rate .row .col-sm-3 h5 {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+#top-rate .row .col-sm-3 a:hover {
+  color: #1f2324
+}
+
+#top-rate .row .col-sm-3 p {
+  margin-top: 10px;
+  line-height: 1.375;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#top-rate .row .col-sm-3 .mov-left {
+  left: -100px;
+  opacity: 0;
+}
+
+#top-rate .row .col-sm-3 .mov-right {
+  left: 100px;
+  opacity: 0;
+}

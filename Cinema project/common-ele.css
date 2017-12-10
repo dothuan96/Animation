@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background-color: #1f2324;
@@ -24,6 +23,7 @@ body a {
 }
 
 a:hover {
+  color: #2bbfbd;
   text-decoration: none;
 }
 

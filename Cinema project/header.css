@@ -290,7 +290,7 @@
 }
 
 #Sign-in .signin-btn .btn:hover, #Sign-up .signin-btn .btn:hover, #Forgot-password .signin-btn .btn:hover {
-  background-color: #2fa8d0;
+  background-color: #44d5d5;
 }
 
 #Sign-in a.forgot-pass, #Sign-in .connect-social i, #Sign-up .connect-social i {
