@@ -188,14 +188,17 @@
   height: 100%;
 }
 
-#theater .theatab-content {
+#theater #theatab-content {
   width: 100%;
   height: auto;
   position: relative;
 }
 
-#theater .theatab-content .theater-tab {
-  position: relative;
+#theater #theatab-content .theater-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   transition: all 1000ms ease;
 }
 
@@ -203,6 +206,6 @@
   opacity: 0;
 }
 
-.hide-tab.show-tab {
+.hide-tab.active {
   opacity: 1;
 }
