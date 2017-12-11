@@ -1,0 +1,125 @@
+#content-part.container-fluid {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#content-part section.movie-slide {
+  height: calc(100vh - 64px);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#content-part section.movie-slide div.wallpaper img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: all 1000ms cubic-bezier(0.840, 0.015, 0.675, 0.950);
+}
+
+#content-part section.movie-slide .sm-wallpaper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: calc(100vh - 120px - 64px);
+}
+
+#content-part section.movie-slide div.sm-wallpaper img.image {
+  width: 33.3333%;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: top;
+  float: left;
+  position: relative;
+  transition: all 500ms ease;
+}
+
+.hide-top {
+  top: 40px;
+}
+
+.show-top {
+  top: 0;
+}
+
+#content-part section.movie-slide div.sm-wallpaper img:hover {
+  top: 0;
+}
+
+#content-part section.best-movie {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 95px;
+}
+
+#content-part section.best-movie h2 {
+  font-size: 35px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+#content-part section.best-movie .row {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#content-part section.best-movie .col-sm-3 {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  min-width: 245px;
+}
+
+#content-part section.best-movie .img-bor {
+  width: inherit;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#content-part section.best-movie img {
+  width: inherit;
+  height: auto;
+  transition: all 500ms ease;
+}
+
+#content-part section.best-movie h5 {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+#content-part section.best-movie img:hover {
+  transform: scale(1.1);
+}
+
+#content-part section.best-movie h5 a:hover {
+  color: #2bbfbd;
+}
+
+#content-part section.best-movie time {
+  margin-top: 10px;
+  color: #565f61;
+  font-size: 16px;
+  line-height: 15px;
+  font-weight: 100;
+}
+
+.row-mov {
+  opacity: 0;
+  top: -100px;
+}

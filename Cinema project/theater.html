@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Theaters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Request font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="common-ele.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="theater.css">
+  </head>
+  <body>
+    <!--Body part-->
+    <main>
+      <div id="theater" class="container-fluid">
+        <!--All theater name and area-->
+        <div class="thea-area">
+          <!--All theater tabs-->
+          <div class="thea-tab">
+            <div class="container">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="Hel">Helsinki</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#Tur">Turku</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#Tamp">Tampere</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#Oul">Oulu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#Rova">Rovaniemi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-tab">
+          <!--Tab pane-->
+          <div class="theatab-content">
+            <div class="container theater-tab hide-tab show-tab" id="Hel">
+              <!--All room name-->
+              <div class="thea-room">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" style="text-align: left;" onclick="left()" href="#">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room active" data-toggle="list" href="#">Finnkino</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Orion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Kino Andorra</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="text-align: right;" onclick="right()" href="#">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!--Theater slide-->
+              <div class="thea-slide">
+                <div class= "sli-thea">
+                  <!--Theaters 1 information-->
+                  <div class="theas hide-thea show-thea">
+                    <div class="thea-img">
+                      <img src="a1-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Finnkino Kinopalatsi</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Kaisaniemenkatu 2, 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>0600 04401 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 9-18, Sun 12-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.2884650768726!2d24.945186476145828!3d60.17118242962712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcde5b94433%3A0x1031e0c4d6104ef1!2sFinnkino+Kinopalatsi!5e0!3m2!1svi!2sfi!4v1512916642119" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Theaters 2 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a2-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Orion</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Sörnäisten rantatie 25 A PL 16, 00501 Helsinki</p>
+                            <p><strong>Tel: </strong>0295 338 000 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 10-18, Sun 10-17</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8751375359955!2d24.931551477620598!3d60.16624590344077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb27ccd10d%3A0x7a71a22ce2eb1f9a!2sOrion!5e0!3m2!1svi!2sfi!4v1512917356387" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Theaters 3 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a3-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Kino Andorra</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Elokuvateatteri Kino Eerikinkatu 11 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>020 175 1620 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 8-18, Sun 11-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.828859762472!2d24.933173795534305!3d60.16701200187514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb233c8bed%3A0xdf2b7d8abf433cd5!2sKino+Andorra!5e0!3m2!1svi!2sfi!4v1512917394468" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container theater-tab hide-tab" id="Tur">
+              <!--All room name-->
+              <div class="thea-room">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" style="text-align: left;" onclick="left()" href="#">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room active" data-toggle="list" href="#"> Elokuvateatteri</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Kinotour</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Paimion Kino</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="text-align: right;" onclick="right()" href="#">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!--Theater slide-->
+              <div class="thea-slide">
+                <div class= "sli-thea">
+                  <!--Theaters 1 information-->
+                  <div class="theas hide-thea show-thea">
+                    <div class="thea-img">
+                      <img src="a3-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Finnkino Kinopalatsi</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Kaisaniemenkatu 2, 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>0600 04401 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 9-18, Sun 12-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.2884650768726!2d24.945186476145828!3d60.17118242962712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcde5b94433%3A0x1031e0c4d6104ef1!2sFinnkino+Kinopalatsi!5e0!3m2!1svi!2sfi!4v1512916642119" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Theaters 2 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a1-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Orion</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Sörnäisten rantatie 25 A PL 16, 00501 Helsinki</p>
+                            <p><strong>Tel: </strong>0295 338 000 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 10-18, Sun 10-17</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8751375359955!2d24.931551477620598!3d60.16624590344077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb27ccd10d%3A0x7a71a22ce2eb1f9a!2sOrion!5e0!3m2!1svi!2sfi!4v1512917356387" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Theaters 3 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a2-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Kino Andorra</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Elokuvateatteri Kino Eerikinkatu 11 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>020 175 1620 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 8-18, Sun 11-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.828859762472!2d24.933173795534305!3d60.16701200187514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb233c8bed%3A0xdf2b7d8abf433cd5!2sKino+Andorra!5e0!3m2!1svi!2sfi!4v1512917394468" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Scripts link-->
+
+    <script src="theater.js" rel="stylesheet"></script>
+</html>
