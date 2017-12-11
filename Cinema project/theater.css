@@ -53,6 +53,16 @@
   margin-top: 26px;
 }
 
+#theater .out-icon {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+#theater .lr-icon.thea-room {
+  position: absolute;
+}
+
 #theater .thea-room ul li {
   width: 20%;
   height: auto;

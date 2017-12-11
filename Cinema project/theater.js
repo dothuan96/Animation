@@ -8,6 +8,7 @@ var thea_tabs = document.getElementsByClassName('theater-tab');
 var areas = document.getElementsByClassName('area')
 var num_thea_area = theas.length / thea_tabs.length; //numberof theater on each area
 var count_room = 0;
+var n=0;
 
 //beacuse all theater div are position: absolute, so height of Slide div is 0
 //but we need height to set overflow: hidden, so we must sum all of contents's height
@@ -18,6 +19,7 @@ for (var i = 0; i < sum_height_slide.length; i++) {
   sum_height_slide[i].style.height = img_height[i+2].offsetHeight + info_height[+2].offsetHeight + 42 + 'px';
 }
 
+//set the position of all image based on of number theater-tab div in array
 for (var x = 0; x < thea_tabs.length; x++) {
  count_room = 0;
   for(var i= x*num_thea_area; i<(num_thea_area*(x+1) -1); i++) {   //set position for each image
@@ -26,9 +28,15 @@ for (var x = 0; x < thea_tabs.length; x++) {
   }
 }
 
+//reset the number of theas div when click on area title
+function change(m) {
+  n = m;
+  b = 0;
+}
+
 function right() {
   if(b <= 0 && b > (num_thea_area - num_thea_area*2 + 1)) { //only execute if the position of last image is 0 on screen and position of first image > (-array.length + 1)
-    for(var a=0; a<num_thea_area; a++) {  //a is the position of image in array
+    for(var a = n*num_thea_area; a< n*num_thea_area + num_thea_area; a++) {  //a is the position of image in array
       theas[a].style.left = (b*win_width - win_width) + "px";
       if(theas[a].style.left == '0px') {
         theas_opa[a].classList.add('show-thea');
@@ -44,7 +52,7 @@ function right() {
     }
     else {
       b= 1;
-      for(var a=0; a<num_thea_area; a++) {  //a is the position of image in array
+      for(var a = n*num_thea_area; a< n*num_thea_area + num_thea_area; a++) {  //a is the position of image in array
         theas[a].style.left = (b*win_width - win_width) + "px";
         if(theas[a].style.left == '0px') { //which theater have been show (left=0) then change opacity=1
           theas_opa[a].classList.add('show-thea');
@@ -62,7 +70,7 @@ function right() {
 
 function left() { //only execute if the position of first image is negative, that's mean if the position of first image on screen is 0 then cannot execute
   if(b < 0) {
-    for(var a=0; a<num_thea_area; a++) {
+    for(var a = n*num_thea_area; a< n*num_thea_area + num_thea_area; a++) {
       theas[a].style.left = (b*win_width + win_width) + "px";
       if(theas[a].style.left == '0px') {
         theas_opa[a].classList.add('show-thea');
@@ -78,7 +86,7 @@ function left() { //only execute if the position of first image is negative, tha
     }
     else {
       b=-1;
-      for(var a=0; a<num_thea_area; a++) {  //a is the position of image in array
+      for(var a = n*num_thea_area; a< n*num_thea_area + num_thea_area; a++) {  //a is the position of image in array
         theas[a].style.left = (b*win_width - win_width) + "px";
         if(theas[a].style.left == '0px') {
           theas_opa[a].classList.add('show-thea');
