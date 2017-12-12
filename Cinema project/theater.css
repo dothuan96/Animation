@@ -13,6 +13,9 @@
 #theater .thea-area .thea-tab {
   background-color: #242829;
   border-bottom: 1px solid #475052;
+  position: relative;
+  opacity: 0;
+  top: -74px;
 }
 
 #theater .thea-area ul li {
@@ -73,6 +76,18 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 300;
+}
+
+#theater .thea-room li a.icon-left {
+  position: relative;
+  opacity: 0;
+  left: -100px;
+}
+
+#theater .thea-room li a.icon-right {
+  position: relative;
+  opacity: 0;
+  left: 100px;
 }
 
 #theater .thea-room .nav-item.show .nav-link, #theater .thea-room .nav-link.active {
@@ -218,4 +233,78 @@
 
 .hide-tab.active {
   opacity: 1;
+}
+
+#theater .theas .thea-price {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-top: 1px solid #fff;
+  margin-top: 90px;
+  padding-top: 76px;
+}
+
+#theater .theas .thea-price h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+#theater .theas .thea-price .table.price-tab1 {
+  margin-top: 50px;
+  position: relative;
+  opacity: 0;
+  left: -300px;
+}
+
+#theater .theas .thea-price .table.price-tab2 {
+  margin-top: 12px;
+  position: relative;
+  opacity: 0;
+  left: 300px;
+}
+
+#theater .thea-price .table th {
+  border: none;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#theater .thea-price .table th.type-mov {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 900;
+  background-color: #fff;
+  color: #1f2324 !important;
+}
+
+#theater .thea-price .table tr.bor-row {
+  border: 2px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#theater .thea-price .table td.td-odd {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+#theater .thea-price .table td {
+  border: 1px solid #fff;
+  border-top: 0;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+#theater .thea-price .table th.td-odd {
+  background-color: #2bbfbd;
+  color: #fff;
+}
+
+#theater .thea-price .table th.td-even {
+  background-color: #fff;
+  color: #1f2324;
 }

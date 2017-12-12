@@ -13,10 +13,11 @@ var n=0;
 //beacuse all theater div are position: absolute, so height of Slide div is 0
 //but we need height to set overflow: hidden, so we must sum all of contents's height
 var sum_height_slide = document.getElementsByClassName('sli-thea');
-var img_height = document.getElementsByClassName('thea-img');
-var info_height = document.getElementsByClassName('thea-info');
+var main_height = document.getElementById('theater');
+var area_height = document.getElementsByClassName('thea-area');
 for (var i = 0; i < sum_height_slide.length; i++) {
-  sum_height_slide[i].style.height = img_height[i+2].offsetHeight + info_height[+2].offsetHeight + 42 + 'px';
+  sum_height_slide[i].style.height = theas[i].offsetHeight + 'px';
+  main_height.style.height = area_height[0].offsetHeight + thea_tabs[i].offsetHeight + 26 + 'px'
 }
 
 //set the position of all image based on of number theater-tab div in array
@@ -101,3 +102,32 @@ function left() { //only execute if the position of first image is negative, tha
       b = b - num_thea_area -1; //reset b based on first image
     }
   }
+
+  /*============================THEATER AREA ANIMATION======================================*/
+  $('.thea-tab').each( function(i){
+      var top_of_object = $(this).offset().top;
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it in */
+      if( bottom_of_window > top_of_object){
+        $('.icon-left').animate({opacity:'1', left: '0'}, 800);
+        $('.icon-right').animate({opacity:'1', left: '0'}, 800);
+        $(this).animate({opacity:'1', top: '0'}, 1000);
+      }
+  });
+
+  /*============================PRICE TABLE ANIMATION WHEN SCROLL DOWN======================================*/
+  $(window).scroll( function(){
+      /* Check the location of each desired element */
+      $('.price-tab1').each( function(i){
+          var top_of_object = $(this).offset().top;
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          /* If the object is completely visible in the window, fade it in */
+          if( bottom_of_window > top_of_object ){
+            $('.price-tab1').animate({opacity:'1', left: '0'}, 1000);
+          }
+          if( bottom_of_window > bottom_of_object ){
+            $('.price-tab2').animate({opacity:'1', left: '0'}, 1000);
+          }
+      });
+  });
