@@ -1,0 +1,223 @@
+#scheduel {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 86px;
+}
+
+#scheduel h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+#scheduel .sche-content {
+  position: relative;
+  margin-top: 50px;
+}
+
+#scheduel .sche-content h6 {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+#scheduel .sche-content .next-week {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flow-root;
+}
+
+#scheduel .sche-content .next-week .next-icon,  #scheduel .sche-content .pre-icon {
+  width: auto;
+  float: right;
+  padding: 14px 18px;
+  color: #747a7c;
+  border-radius: 3px;
+  border: 1px solid #747a7c;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 300;
+  overflow: hidden;
+  transition: all 300ms cubic-bezier(0.605, 0.005, 0.360, 1.005);
+}
+
+#scheduel .sche-content .pre-icon {
+  float: left;
+}
+
+#scheduel .sche-content .next-week .next-icon p, #scheduel .sche-content .pre-icon p {
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+}
+
+#scheduel .sche-content .pre-icon p {
+  margin-left: 10px;
+}
+
+#scheduel .sche-content .next-week .next-icon:hover, #scheduel .sche-content .pre-icon:hover {
+  background-color: #2bbfbd;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border-color: transparent;
+}
+
+#scheduel .sche-content .hide-icon {
+  opacity: 0;
+}
+
+#scheduel .sche-content .hide-icon.show-icon {
+  opacity: 1;
+}
+
+#scheduel .sche-content #sche-slide {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 24px;
+}
+
+#scheduel .sche-content .table {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  width: inherit;
+  table-layout: fixed;
+  margin: 0;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.605, 0.005, 0.360, 1.005);
+}
+
+#scheduel .sche-content .table.show-table {
+  opacity: 1;
+}
+
+#scheduel .sche-content .table th {
+  border: none;
+  font-weight: 500;
+  padding: 6px 12px;;
+}
+
+#scheduel .sche-content .table th.td-odd {
+  background-color: #fff;
+  color: #1f2324;
+}
+
+#scheduel .sche-content .table th.td-even {
+  background-color: #2bbfbd;
+  color: #fff;
+}
+
+#scheduel .sche-content .table th.th-mov {
+  border-bottom: 1px solid #fff;
+  color: #2bbfbd;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+#scheduel .sche-content .table td {
+  border: 1px solid #fff;
+  border-top: 0;
+  vertical-align: middle;
+  padding: 16px 12px;
+  transition: all 300ms ease;
+}
+
+#scheduel .sche-content .table td.td-time {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+#scheduel .sche-content .table td.mov:hover {
+  background-color: #fff;
+  color: #1f2324;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#scheduel .sche-content .table td.mov.less {
+  color: #EEE657;
+}
+
+#scheduel .sche-content .table td.mov.less:hover {
+  background-color: #EEE657;
+  color: #fff;
+}
+
+#scheduel .sche-content .table td.mov.out {
+  color: #FF6766;
+}
+
+#scheduel .sche-content .table td.mov.out:hover {
+  background-color: #FF6766;
+  color: #fff;
+  cursor: none;
+}
+
+#scheduel .sche-content .table-expl {
+  position: initial;
+  margin-top: 24px;
+  opacity: 1;
+}
+
+#scheduel .sche-content .table-expl td {
+  padding: 0;
+  padding-right: 40px;
+  padding-bottom: 5px;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#scheduel .sche-content .table-expl td .td-box {
+  width: 20px;
+  height: 20px;
+  background-color: #FF6766;
+}
+
+#scheduel .sche-content #search-title {
+  background-color: #475052;
+  text-transform: uppercase;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  line-height: 48px;
+}
+
+#scheduel .sche-content #search-title h5 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* remove the original arrow */
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  height: 100%;
+  width: 50px;
+  background-color: #e5e5e5;
+  pointer-events: none;
+}

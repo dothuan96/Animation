@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scheduel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Request font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="common-ele.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="scheduel.css">
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <!--Black nav-->
+      <div id="header-part" class="container-fluid relativ">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">North Kino</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Blue navigation part-->
+      <div id="blue-nav" class="container-fluid">
+        <div class="container">
+          <div class="blue-content">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Theater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Scheduel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Review</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!--Black navigation with position fixed-->
+      <div id="header-part" class="container-fluid fixed-nav">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">North Kino</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Body part-->
+    <main>
+      <div id="scheduel" class="container-fluid">
+        <section class="container">
+          <h2>Scheduel</h2>
+          <div class="sche-content">
+            <div class="row">
+              <div class="col-sm-8">
+                <h6 id="theater-title">Finnkino Kinopalasti</h6>
+                <div class="next-week">
+                  <div class="next-icon hide-icon show-icon" onclick="next_week()">
+                    <p>Next week</p>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </div>
+                  <div class="pre-icon hide-icon" onclick="pre_week()">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <p>Pre week</p>
+                  </div>
+                </div>
+                <div id="sche-slide">
+                  <table class="table table-sli show-table">
+                    <thead>
+                      <tr>
+                        <th class="th-mov">Car 3</th>
+                        <th class="td-odd">Mon <br> 11.12</th>
+                        <th class="td-even">Tues <br> 12.12</th>
+                        <th class="td-odd">Wed <br> 13.12</th>
+                        <th class="td-even">Thur <br> 14.12</th>
+                        <th class="td-odd">Fri <br> 15.12</th>
+                        <th class="td-even">Sat<br> 16.12</th>
+                        <th class="td-odd" style="border-right: 1px solid #fff;">Sun<br> 17.12</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="td-time">9:00</td>
+                        <td class="mov">2D</td>
+                        <td></td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td></td>
+                        <td></td>
+                        <td class="mov">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">11:00</td>
+                        <td></td>
+                        <td class="mov less">3D</td>
+                        <td class="mov out">2D</td>
+                        <td></td>
+                        <td></td>
+                        <td class="mov less">2D</td>
+                        <td class="mov out">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">13:30</td>
+                        <td class="mov">3D</td>
+                        <td class="mov less">2D</td>
+                        <td></td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">2D</td>
+                        <td></td>
+                        <td class="mov">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">15:30</td>
+                        <td class="mov">2D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov less">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">18:00</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov less">3D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">20:15</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov">2D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov less">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">22:00</td>
+                        <td class="mov less">3D</td>
+                        <td></td>
+                        <td class="mov">2D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-sli">
+                    <thead>
+                      <tr>
+                        <th class="th-mov">Car 3</th>
+                        <th class="td-odd">Mon <br> 18.12</th>
+                        <th class="td-even">Tues <br> 19.12</th>
+                        <th class="td-odd">Wed <br> 20.12</th>
+                        <th class="td-even">Thur <br> 21.12</th>
+                        <th class="td-odd">Fri <br> 22.12</th>
+                        <th class="td-even">Sat<br> 23.12</th>
+                        <th class="td-odd" style="border-right: 1px solid #fff;">Sun<br> 24.12</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="td-time">9:00</td>
+                        <td class="mov">2D</td>
+                        <td></td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td></td>
+                        <td></td>
+                        <td class="mov">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">11:00</td>
+                        <td></td>
+                        <td class="mov less">3D</td>
+                        <td class="mov out">2D</td>
+                        <td></td>
+                        <td></td>
+                        <td class="mov less">2D</td>
+                        <td class="mov out">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">13:30</td>
+                        <td class="mov">3D</td>
+                        <td class="mov less">2D</td>
+                        <td></td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">2D</td>
+                        <td></td>
+                        <td class="mov">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">15:30</td>
+                        <td class="mov">2D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov less">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">18:00</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov less">3D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">20:15</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov">2D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov">3D</td>
+                        <td class="mov out">3D</td>
+                        <td class="mov less">2D</td>
+                        <td class="mov less">2D</td>
+                      </tr>
+                      <tr>
+                        <td class="td-time">22:00</td>
+                        <td class="mov less">3D</td>
+                        <td></td>
+                        <td class="mov">2D</td>
+                        <td class="mov out">2D</td>
+                        <td class="mov">3D</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <table class="table table-expl">
+                  <tr>
+                    <td style="width: 20px;"><div class="td-box" style="background-color: #FF6766;"></div></td>
+                    <td>Run out of seat</td>
+                  </tr>
+                  <tr>
+                    <td><div class="td-box" style="background-color: #EEE657;"></div></td>
+                    <td>Less seats available</td>
+                  </tr>
+                  <tr>
+                    <td><div class="td-box" style="background-color: #fff;"></div></td>
+                    <td>Many seats available</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-sm-4">
+                <div id="search-title">
+                  <h5>Search scheduel</h5>
+                  <div class="form-group">
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Footer part-->
+    <footer>
+      <div id="footer-part" class="container-fluid">
+        <!--Subcribe email-->
+        <div class="sub-email">
+          <div class="container">
+            <label class="label-sub">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              Subscribe to our newsletter to receive news, updates, and another stuff by email:
+            </label>
+            <div class="sub-input">
+              <input class="form-control" type="email" placeholder="Enter your email...">
+              <button type="button" class="btn">Subcribe</button>
+            </div>
+          </div>
+        </div>
+        <!--Contact information-->
+        <div class="container">
+          <div class="info">
+            <div class="social-contact">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="copyright">
+              <p>North Kino is proudly powered by WordPress Entries (RSS) and Comments (RSS) Privacy Policy</p>
+              <div class="logo">
+                <a href="#" class="direct-home">
+                  <i class="fa fa-ticket" aria-hidden="true"></i>
+                  <div class="logo-text">
+                    <span class="logo-name">North Kino</span>
+                    <span class="logo-slogan">The best online ticket store</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Scripts link-->
+    <script src="common-js.js" rel="stylesheet"></script>
+    <script src="scheduel.js" rel="stylesheet"></script>
+  </body>
+</html>
