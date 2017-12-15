@@ -24,7 +24,7 @@ $(window).scroll( function(){
 
 /*========================NAVIGATION FIXED POSITION (header)===================*/
 $(window).scroll( function(){
-  var top_of_object = $('.movie-slide').offset().top;
+  var top_of_object = $('#blue-nav').offset().top + $('#blue-nav').outerHeight();
   var top_of_window = $(window).scrollTop();
 
   if( top_of_window > top_of_object ){

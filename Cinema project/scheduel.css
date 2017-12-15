@@ -202,6 +202,9 @@
   vertical-align: middle;
   margin: 0;
   font-size: 20px;
+  position: relative;
+  opacity: 0;
+  left: 100px;
 }
 
 #scheduel .sche-content #search-title .select {
@@ -209,6 +212,8 @@
   position: relative;
   display: block;
   text-align: right;
+  opacity: 0;
+  left: 100px;
 }
 
 #scheduel .sche-content #search-title select.form-control {
@@ -293,7 +298,6 @@ select + .icon-select {
   cursor: pointer;
   margin-left: auto;
   background-color: #535d5f;
-  opacity: 0.85;
   transition: all 300ms ease;
 }
 
@@ -330,7 +334,7 @@ select + .icon-select {
   opacity: 1;
 }
 
-#scheduel section.mov-rec .mov-slide  .row {
+#scheduel section.mov-rec .mov-slide .row {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -343,7 +347,7 @@ select + .icon-select {
   text-align: center;
   color: #fff;
   padding: 10px;
-  min-width: 245px;
+  min-width: 265px;
 }
 
 #scheduel section.mov-rec .mov-slide  .img-bor {
@@ -381,4 +385,26 @@ select + .icon-select {
   margin: 0px;
   font-size: 16px;
   font-weight: 300;
+}
+
+.col-sm-8 {
+  opacity: 0;
+}
+
+.mov, .mov.out, .mov.less {
+  position: relative;
+  top: -57px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.expl-p {
+  position: relative;
+  left: -200px;
+  z-index: -1;
+}
+
+.row-mov {
+  top: -200px;
+  opacity: 0;
 }
