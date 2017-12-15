@@ -7,9 +7,9 @@
 
 #header-part.fixed-nav {
   position: fixed;
-  top: -112px;
   border-bottom: 0px solid #5f6a6d;
   z-index: 4;
+  top: -112px;
 }
 
 #header-part div.nav-bar {

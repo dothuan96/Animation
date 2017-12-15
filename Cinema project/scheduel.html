@@ -183,6 +183,7 @@
     <!--Body part-->
     <main>
       <div id="scheduel" class="container-fluid">
+        <!--Time table-->
         <section class="container">
           <h2>Scheduel</h2>
           <div class="sche-content">
@@ -390,15 +391,132 @@
               </div>
               <div class="col-sm-4">
                 <div id="search-title">
-                  <h5>Search scheduel</h5>
+                  <h5 class="select">Search scheduel</h5>
                   <div class="form-group">
-                    <select class="form-control" id="sel1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                    </select>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <div class="select">
+                      <select class="form-control">
+                        <option>Helsinki</option>
+                        <option>Turku</option>
+                        <option>Tampere</option>
+                        <option>Oulu</option>
+                        <option>Rovaniemi</option>
+                      </select>
+                      <div class="icon-select">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <select class="form-control">
+                        <option>Finnkino Kinopalasti</option>
+                        <option>Orion</option>
+                        <option>Kino Andorra</option>
+                      </select>
+                      <div class="icon-select">
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <select class="form-control">
+                        <option>Car 3</option>
+                        <option>King Arthur</option>
+                        <option>logan</option>
+                        <option>Moana</option>
+                        <option>Jungle Book</option>
+                        <option>Kong! Skull Island</option>
+                        <option>Zootopia</option>
+                        <option>Deadpool</option>
+                      </select>
+                      <div class="icon-select">
+                        <i class="fa fa-film" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <button class="btn" type="button" name="button">Get it</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Movie recommend slide-->
+        <section class="mov-rec">
+          <h2 class="container">Now showing movies</h2>
+          <div id="movie-slide" class="mov-slide container-fluid">
+            <div class="container">
+              <!--Left right arrow-->
+              <div class="lr-icon">
+                <div class="icon-bor icon-left" onclick="mov_left()">
+                  <i class="fa fa-caret-left" aria-hidden="true"></i>
+                </div>
+                <div class="icon-bor icon-right" onclick="mov_right()">
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </div>
+              </div>
+              <!--Row 1-->
+              <div class="slide-content show-mov">
+                <div class="row row-mov">
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="001.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Car 3</a></h5>
+                    <p class="time">Star race car Lightning McQueen and his pal Mater
+                      head overseas to compete in the World Grand Prix race.</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="002.jpg" alt="">
+                    </div>
+                    <h5><a href="#">King Arthur</a></h5>
+                    <p class="time">Robbed of his birthright, Arthur comes up the hard way in the back alleys of the city.</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="003.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Logan</a></h5>
+                    <p class="time">In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border.</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="004.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Moana</a></h5>
+                    <p class="time">In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island,...</p>
+                  </div>
+                </div>
+              </div>
+              <!--Row 2-->
+              <div class="slide-content">
+                <div class="row row-mov">
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="005.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Jungle Book</a></h5>
+                    <p class="time">Favreau, Marks and producer Brigham Taylor developed the film's story as a balance...</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="006.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Kong! Skull island</a></h5>
+                    <p class="time">A team of scientists explore an uncharted island in the Pacific, venturing into the domain of the mighty Kong</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="007.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Zootopia</a></h5>
+                    <p class="time">In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together...</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="img-bor">
+                      <img src="008.jpg" alt="">
+                    </div>
+                    <h5><a href="#">Deadpool</a></h5>
+                    <p class="time">A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that...</p>
                   </div>
                 </div>
               </div>

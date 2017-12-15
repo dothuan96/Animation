@@ -24,16 +24,14 @@ $(window).scroll( function(){
 
 /*========================NAVIGATION FIXED POSITION (header)===================*/
 $(window).scroll( function(){
-  var top_of_object = $('main').offset().top;
+  var top_of_object = $('.movie-slide').offset().top;
   var top_of_window = $(window).scrollTop();
 
   if( top_of_window > top_of_object ){
-    $(".fixed-nav").animate({top:'0', borderBottomWidth: '0px'}, 800);
-    console.log("a");
+    $(".fixed-nav").animate({top:'0', borderBottomWidth: '1px'}, 800);
   }
   /*else {
     $(".fixed-nav").animate({top:'-112px', borderBottomWidth: '0'}, 800);
-    console.log("b");
   }*/
 });
 

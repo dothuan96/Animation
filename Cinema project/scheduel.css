@@ -1,4 +1,4 @@
-#scheduel {
+#scheduel section {
   width: 100%;
   height: auto;
   position: relative;
@@ -59,7 +59,7 @@
   margin-left: 10px;
 }
 
-#scheduel .sche-content .next-week .next-icon:hover, #scheduel .sche-content .pre-icon:hover {
+#scheduel .sche-content .next-week .next-icon:hover, #scheduel .sche-content .pre-icon:hover, #scheduel .sche-content #search-title .btn:hover {
   background-color: #2bbfbd;
   color: #fff;
   cursor: pointer;
@@ -197,10 +197,40 @@
 
 #scheduel .sche-content #search-title h5 {
   line-height: 1.5;
-  display: inline-block;
+  display: inline-block !important;
+  text-align: center !important;
   vertical-align: middle;
   margin: 0;
   font-size: 20px;
+}
+
+#scheduel .sche-content #search-title .select {
+  width: 100%;
+  position: relative;
+  display: block;
+  text-align: right;
+}
+
+#scheduel .sche-content #search-title select.form-control {
+  padding: 10px 12px;
+  background-color: #fff;
+  border-radius: 0px;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #1f2324;
+  margin-top: 24px;
+}
+
+#scheduel .sche-content #search-title select option {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: fit-content;
 }
 
 /* remove the original arrow */
@@ -211,13 +241,144 @@ select.form-control {
   /* no standardized syntax available, no ie-friendly solution available */
 }
 
-select + i.fa {
+select + .icon-select {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 14px;
   height: 100%;
   width: 50px;
-  background-color: #e5e5e5;
   pointer-events: none;
+  text-align: center !important;
+  background-color: #2bbfbd;
+}
+
+#scheduel .sche-content #search-title i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+#scheduel .sche-content #search-title .btn {
+  border: 1px solid #747a7c;
+  border-radius: 3px;
+  margin-top: 24px;
+  padding: 0px 20px;
+  font-size: 20px;
+  line-height: 48px;
+  color: #747a7c;
+  background-color: transparent;
+}
+
+#scheduel .mov-rec {
+  background-color: #2bbfbd;
+}
+
+#scheduel section.mov-rec .mov-slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scheduel section.mov-rec .mov-slide .lr-icon {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+#scheduel section.mov-rec .mov-slide .lr-icon .icon-bor {
+  width: 50px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  margin-left: auto;
+  background-color: #535d5f;
+  opacity: 0.85;
+  transition: all 300ms ease;
+}
+
+#scheduel section.mov-rec .mov-slide .lr-icon i.fa {
+  line-height: 1.5;
+  font-size: 30px;
+}
+
+#scheduel section.mov-rec .mov-slide .lr-icon .icon-right {
+  position: relative;
+  float: right;
+}
+
+#scheduel section.mov-rec .mov-slide .lr-icon .icon-left {
+  position: relative;
+  float: left;
+}
+
+#scheduel section.mov-rec .mov-slide .icon-bor:hover {
+  opacity: 1;
+  background-color: #fff;
+  color: #2bbfbd;
+}
+
+#scheduel section.mov-rec .mov-slide .slide-content {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.605, 0.005, 0.360, 1.005);
+}
+
+#scheduel section.mov-rec .mov-slide .slide-content.show-mov {
+  opacity: 1;
+}
+
+#scheduel section.mov-rec .mov-slide  .row {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#scheduel section.mov-rec .mov-slide  .col-sm-3 {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  min-width: 245px;
+}
+
+#scheduel section.mov-rec .mov-slide  .img-bor {
+  width: inherit;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#scheduel section.mov-rec .mov-slide  img {
+  width: inherit;
+  height: auto;
+  transition: all 500ms ease;
+}
+
+#scheduel section.mov-rec .mov-slide  h5 {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+#scheduel section.mov-rec .mov-slide  img:hover {
+  transform: scale(1.1);
+}
+
+#scheduel section.mov-rec .mov-slide  h5 a:hover {
+  color: #1f2324;
+}
+
+#scheduel section.mov-rec .mov-slide  p.time {
+  margin-top: 10px;
+  line-height: 1.375;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 300;
 }
