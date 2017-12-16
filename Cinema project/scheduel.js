@@ -3,7 +3,7 @@ var slide_height = document.getElementById('sche-slide');
 var tables = document.getElementsByClassName('table');
 var tables_height = tables[0].offsetHeight;
 var tables_width = tables[0].offsetWidth;
-slide_height.style.height = tables_height + 'px';
+slide_height.style.height = tables_height + 12 + 'px';
 
 for (var i = 0; i < tables.length; i++) {
   tables[i].style.left = i*tables_width + 'px';
@@ -117,9 +117,14 @@ $('.col-sm-8').each( function(i){
     if( bottom_of_window > top_of_object){
       $(this).animate({opacity:'1'}, 800);
       $('.mov, .mov.out, .mov.less').animate({opacity:'0', top:'-57px'}, 800);
-      $('.expl-p').animate({left:'-220px'}, 800);
-      $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 800);
-      $('.expl-p').animate({left:'0'}, 800);
+      $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 1000);
+
+      $('p.1').animate({opacity:'0', left:'-162px'}, 600);
+      $('p.2').animate({opacity:'0', left:'-162px'}, 600*2);
+      $('p.3').animate({opacity:'0', left:'-162px'}, 600*3);
+      $('p.1').animate({opacity:'1', left:'0'}, 600);
+      $('p.2').animate({opacity:'1', left:'0'}, 600);
+      $('p.3').animate({opacity:'1', left:'0'}, 600);
 
       $('.select.1').animate({opacity:'0', left:'100px'}, 400);
       $('.select.2').animate({opacity:'0', left:'100px'}, 400*2);

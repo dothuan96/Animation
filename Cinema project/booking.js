@@ -98,6 +98,7 @@ window.onload = function() {
   for(var i = 0; i < seats.length; i++) {
     seats[i].onclick = function() {
       this.classList.toggle('selected');
+      document.getElementsByClassName('apply-btn')[0].style.opacity = 1;
     }
   }
 }

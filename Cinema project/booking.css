@@ -40,7 +40,7 @@
   opacity: 1;
 }
 
-#booking #book-system .book-title {
+#booking #book-system .book-title, #booking #ticket-info .ticket-title {
   background-color: #475052;
   text-transform: uppercase;
   vertical-align: middle;
@@ -49,7 +49,7 @@
   line-height: 48px;
 }
 
-#booking #book-system h5 {
+#booking #book-system h5, #booking #ticket-info h5 {
   line-height: 1.5;
   display: inline-block !important;
   text-align: center !important;
@@ -117,7 +117,7 @@ select + .icon-select, .icon-select {
   line-height: 1.5;
 }
 
-#booking #book-system .btn {
+#booking #book-system .btn, #booking #ticket-info .btn {
   border: 1px solid #747a7c;
   border-radius: 3px;
   margin-top: 24px;
@@ -129,7 +129,7 @@ select + .icon-select, .icon-select {
   background-color: transparent;
 }
 
-#booking #book-system .btn:hover, #time-table .modal-body .next-week .next-icon:hover, #time-table .modal-body .pre-icon:hover {
+#booking #book-system .btn:hover, #time-table .modal-body .next-week .next-icon:hover, #time-table .modal-body .pre-icon:hover, #booking #ticket-info .btn:hover {
   background-color: #2bbfbd;
   color: #fff;
   cursor: pointer;
@@ -317,7 +317,7 @@ select + .icon-select, .icon-select {
   border: none;
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 24px;
 }
 
 #booking .seat-content .table-seat td {
@@ -357,4 +357,68 @@ select + .icon-select, .icon-select {
 #booking .seat-content .table-seat td.seat.out {
   background-color: #FF6766;
   cursor: none;
+}
+
+#booking .expl {
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+}
+
+#booking .expl .cont {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#booking .expl .box {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  display: inline-block;
+}
+
+#booking .expl .cont p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-left: 6px;
+  display: inline;
+  position: relative;
+  vertical-align: middle;
+  top: -8px;
+}
+
+#booking #ticket-info .table {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#booking #ticket-info .table th, #booking #ticket-info .table td {
+  border: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#booking #ticket-info .table th {
+  padding-left: 3px;
+  color: #2fd0cd;
+  font-size: 20px;
+}
+
+#booking #ticket-info .apply-btn {
+  display: block;
+  position: relative;
+  text-align: right;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+#booking #ticket-info .apply-btn .btn {
+  margin-top: 0;
 }

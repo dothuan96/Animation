@@ -164,27 +164,39 @@
   cursor: none;
 }
 
-#scheduel .sche-content .table-expl {
-  position: initial;
-  margin-top: 24px;
-  opacity: 1;
+#scheduel .expl {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
 }
 
-#scheduel .sche-content .table-expl td {
-  padding: 0;
-  padding-right: 50px;
-  padding-bottom: 5px;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  font-weight: 300;
+#scheduel .expl .cont {
+  display: inline-block;
   vertical-align: middle;
+  line-height: 30px;
+  overflow: hidden;
 }
 
-#scheduel .sche-content .table-expl td .td-box {
+#scheduel .expl .box {
   width: 30px;
   height: 30px;
-  background-color: #FF6766;
+  background: #fff;
+  display: inline-block;
+}
+
+#scheduel .expl .cont p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-left: 6px;
+  display: inline;
+  position: relative;
+  vertical-align: middle;
+  top: -8px;
+  left: -162px;
+  z-index: -1;
+  opacity: 0;
 }
 
 #scheduel .sche-content #search-title {
