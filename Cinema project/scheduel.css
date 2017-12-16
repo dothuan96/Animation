@@ -63,7 +63,6 @@
   background-color: #2bbfbd;
   color: #fff;
   cursor: pointer;
-  font-weight: 500;
   border-color: transparent;
 }
 
@@ -80,6 +79,7 @@
   height: auto;
   position: relative;
   margin-top: 24px;
+  overflow: hidden;
 }
 
 #scheduel .sche-content .table {
@@ -100,7 +100,7 @@
 #scheduel .sche-content .table th {
   border: none;
   font-weight: 500;
-  padding: 6px 12px;;
+  padding: 6px 12px;
 }
 
 #scheduel .sche-content .table th.td-odd {
@@ -187,6 +187,10 @@
 }
 
 #scheduel .sche-content #search-title {
+  position: relative;
+}
+
+#scheduel .sche-content #search-title .title {
   background-color: #475052;
   text-transform: uppercase;
   vertical-align: middle;
@@ -203,8 +207,7 @@
   margin: 0;
   font-size: 20px;
   position: relative;
-  opacity: 0;
-  left: 100px;
+  width: 100%;
 }
 
 #scheduel .sche-content #search-title .select {
@@ -271,6 +274,7 @@ select + .icon-select {
   font-size: 20px;
   line-height: 48px;
   color: #747a7c;
+  font-weight: 300;
   background-color: transparent;
 }
 

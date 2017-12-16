@@ -121,15 +121,16 @@ $('.col-sm-8').each( function(i){
       $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 800);
       $('.expl-p').animate({left:'0'}, 800);
 
-      $('#search-title h5').animate({opacity:'1', left:'0'}, 800);
       $('.select.1').animate({opacity:'0', left:'100px'}, 400);
       $('.select.2').animate({opacity:'0', left:'100px'}, 400*2);
       $('.select.3').animate({opacity:'0', left:'100px'}, 400*3);
       $('.select.4').animate({opacity:'0', left:'100px'}, 400*4);
+      $('.select.5').animate({opacity:'0', left:'100px'}, 400*5);
       $('.select.1').animate({opacity:'1', left:'0'}, 600);
       $('.select.2').animate({opacity:'1', left:'0'}, 600);
       $('.select.3').animate({opacity:'1', left:'0'}, 600);
       $('.select.4').animate({opacity:'1', left:'0'}, 600);
+      $('.select.5').animate({opacity:'1', left:'0'}, 600);
     }
 });
 
