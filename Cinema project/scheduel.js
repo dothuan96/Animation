@@ -117,7 +117,7 @@ $('.col-sm-8').each( function(i){
     if( bottom_of_window > top_of_object){
       $(this).animate({opacity:'1'}, 800);
       $('.mov, .mov.out, .mov.less').animate({opacity:'0', top:'-57px'}, 800);
-      $('.expl-p').animate({left:'-200px'}, 800);
+      $('.expl-p').animate({left:'-220px'}, 800);
       $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 800);
       $('.expl-p').animate({left:'0'}, 800);
 
