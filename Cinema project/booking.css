@@ -1,0 +1,13 @@
+#booking section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 86px;
+}
+
+#booking h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
