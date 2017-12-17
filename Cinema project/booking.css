@@ -3,7 +3,6 @@
   height: auto;
   position: relative;
   padding-top: 90px;
-  padding-bottom: 86px;
 }
 
 #booking h2 {
@@ -294,6 +293,26 @@ select + .icon-select, .icon-select {
   width: 100%;
 }
 
+#booking section#pick-seat {
+  border-top: 1px solid #fff;
+}
+
+#booking section.all-seat {
+  height: 0px;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.745, -0.340, 0.425, 1.430);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+
+#booking section.show-more {
+  height: auto;
+  opacity: 1;
+  transform: rotateX(0deg);
+  padding-bottom: 86px;
+  margin-top: 86px;
+}
+
 #booking .seat-content {
   position: relative;
   margin-top: 50px;
@@ -427,21 +446,56 @@ select + .icon-select, .icon-select {
   background-color: #fff;
   width: 628px;
   color: #242829;
+  padding: 0;
+}
+
+#Payment .col-sm-4.price {
+  background-image: url('000-texture.jpg');
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  line-height: 446px;
+  overflow: hidden;
+}
+
+#Payment .col-sm-4.price .pay {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  color: #fff;
+  display: inline-block !important;
+}
+
+#Payment .col-sm-4.price p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#Payment .col-sm-4.price h2 {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+#Payment .col-sm-8.price {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 30px;
 }
 
  #Payment h4 {
-   font-size: 36px;
-   line-height: 36px;
+   font-size: 34px;
+   line-height: 34px;
    font-weight: 300;
  }
 
 #Payment h6 {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 300;
 }
 
 #Payment .card {
+  margin-top: 24px;
   padding: 20px;
   padding-bottom: 8px;
   border-radius: 5px;
@@ -481,7 +535,26 @@ select + .icon-select, .icon-select {
 }
 
 #Payment .card img {
-  width: 80px;
+  width: 86px;
   height: auto;
   margin-top: 18px;
+}
+
+#Payment .col-sm-8.price button.btn {
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+#Payment .col-sm-8.price button.btn.pay {
+  background-color: #2bbfbd;
+  color: #fff;
+}
+
+#Payment .col-sm-8.price button.btn:hover {
+  background-color: #00ffff;
 }

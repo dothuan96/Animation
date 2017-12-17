@@ -244,7 +244,7 @@
                       </div>
                     </div>
                     <div class="select 6">
-                      <button class="btn" type="button" name="button">Next step
+                      <button class="btn" type="button" onclick="showseat()">Next step
                       </button>
                     </div>
                   </div>
@@ -254,7 +254,7 @@
           </div>
         </section>
         <!--Pick a seat-->
-        <section class="container" style="border-top: 1px solid #fff;">
+        <section id="pick-seat" class="container all-seat">
           <h2>Select a seat</h2>
           <div class="seat-content">
             <div class="row">
@@ -854,10 +854,13 @@
           <!-- Modal body -->
           <div class="modal-body">
             <div class="row">
-              <div class="col-sm-4">
-                PRICE HERE
+              <div class="col-sm-4 price">
+                <div class="pay">
+                  <p>To pay</p>
+                  <h2>14.20 &#8364;</h2>
+                </div>
               </div>
-              <div class="col-sm-8">
+              <div class="col-sm-8 price">
                 <h4>Payment</h4>
                 <h6>Fill the credit card to begin:</h6>
                 <div class="card">
@@ -891,6 +894,7 @@
                     <input type="text" class="form-control" id="card-name">
                   </div>
                 </div>
+                <button type="button" class="btn pay">Pay now</button>
               </div>
             </div>
           </div>

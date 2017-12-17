@@ -114,3 +114,11 @@ window.onload = function() {
     seats[i].addEventListener('click', clickHandler, false);
   }
 }*/
+
+/*=========================================PICK SEAT ANIMAION============================================*/
+var pick_seat = document.getElementById('pick-seat');
+var pick_seat_height = pick_seat.offsetHeight;
+
+function showseat() {
+  document.getElementById("pick-seat").classList.toggle("show-more");
+}

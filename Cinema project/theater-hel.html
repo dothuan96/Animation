@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Theaters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Request font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="common-ele.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="theater.css">
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <!--Black nav-->
+      <div id="header-part" class="container-fluid relativ">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">North Kino</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Blue navigation part-->
+      <div id="blue-nav" class="container-fluid">
+        <div class="container">
+          <div class="blue-content">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Theater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Scheduel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Review</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!--Black navigation with position fixed-->
+      <div id="header-part" class="container-fluid fixed-nav">
+        <div class="container">
+          <!--Navigation bar-->
+          <div class="nav-bar">
+            <div class="avatar-acc">
+              <a href="#" class="ava-acc" onclick="showmenu()">
+                <div class="ava">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="acc" style="display: inline-block">
+                  My account
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </a>
+              <!--Dropdown menu-->
+              <div id="col-menu" class="drop-down drop">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Setting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-in">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Sign-up">Register</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Navigation bar-->
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="cinema.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!--Logo-->
+          <div class="logo">
+            <a href="cinema.html" class="direct-home">
+              <i class="fa fa-ticket" aria-hidden="true"></i>
+              <div class="logo-text">
+                <span class="logo-name">North Kino</span>
+                <span class="logo-slogan">The best online ticket store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Body part-->
+    <main>
+      <div id="theater" class="container-fluid">
+        <!--All theater name and area-->
+        <div class="thea-area">
+          <!--All theater tabs-->
+          <div class="thea-tab">
+            <div class="container">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#Hel">Helsinki</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="theater-tur.html">Turku</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="theater-tamp.html">Tampere</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="theater-oul.html">Oulu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="theater-rova.html">Rovaniemi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Left Right logo-->
+          <div class="out-icon container">
+            <div class="lr-icon thea-room">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link icon-left" style="text-align: left; cursor: pointer;" onclick="left()">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                  <a class="nav-link icon-right" style="text-align: right; cursor: pointer;" onclick="right()" >
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-tab">
+          <!--Tab pane-->
+          <div id="theatab-content" class="container">
+            <div class="theater-tab hide-tab active" id="Hel">
+              <!--All room name-->
+              <div class="thea-room">
+                <ul class="nav">
+                  <li class="nav-item"></li>
+                  <li class="nav-item">
+                    <a class="nav-link room active" data-toggle="list" href="#">Finnkino</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Orion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link room" data-toggle="list" href="#">Kino Andorra</a>
+                  </li>
+                  <li class="nav-item"></li>
+                </ul>
+              </div>
+              <!--Theater slide-->
+              <div class="thea-slide">
+                <div class= "sli-thea">
+                  <!--Theaters 1 information-->
+                  <div class="theas hide-thea show-thea">
+                    <div class="thea-img">
+                      <img src="a1-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Finnkino Kinopalatsi</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Kaisaniemenkatu 2, 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>0600 04401 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 9-18, Sun 12-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.2884650768726!2d24.945186476145828!3d60.17118242962712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcde5b94433%3A0x1031e0c4d6104ef1!2sFinnkino+Kinopalatsi!5e0!3m2!1svi!2sfi!4v1512916642119" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thea-price">
+                      <h2>Prices table</h2>
+                      <table class="table price-tab1">
+                        <thead>
+                          <tr>
+                            <th class="type-mov" rowspan="2">2D price</th>
+                            <th class="td-odd" colspan="3">Mon - Fri</th>
+                            <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                          </tr>
+                          <tr>
+                            <th class="td-odd">9h - 12h</th>
+                            <th class="td-even">Before 17h</th>
+                            <th class="td-odd">After 17h</th>
+                            <th class="td-even">9h - 12h</th>
+                            <th class="td-odd">Before 17h</th>
+                            <th class="td-even">After 17h</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="bor-row">
+                            <td class="td-odd">Adult</td>
+                            <td>10.00</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>18.99</td>
+                          </tr>
+                          <tr class="bor-row">
+                            <td class="td-odd">Children</td>
+                            <td>8.00</td>
+                            <td>10.20</td>
+                            <td>10.20</td>
+                            <td colspan="3">12.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class='table price-tab2'>
+                        <tr>
+                          <th class="type-mov" rowspan="2">3D price</th>
+                          <th class="td-odd" colspan="3">Mon - Fri</th>
+                          <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                        </tr>
+                        <tr>
+                          <th class="td-odd">9h - 12h</th>
+                          <th class="td-even">Before 17h</th>
+                          <th class="td-odd">After 17h</th>
+                          <th class="td-even">9h - 12h</th>
+                          <th class="td-odd">Before 17h</th>
+                          <th class="td-even">After 17h</th>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Adult</td>
+                          <td>12.20</td>
+                          <td>14.40</td>
+                          <td>18.50</td>
+                          <td>14.20</td>
+                          <td>18.50</td>
+                          <td>22.00</td>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Children</td>
+                          <td>9.00</td>
+                          <td>11.30</td>
+                          <td>11.30</td>
+                          <td colspan="3">13.00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!--Theaters 2 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a2-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Orion</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Sörnäisten rantatie 25 A PL 16, 00501 Helsinki</p>
+                            <p><strong>Tel: </strong>0295 338 000 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 10-18, Sun 10-17</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8751375359955!2d24.931551477620598!3d60.16624590344077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb27ccd10d%3A0x7a71a22ce2eb1f9a!2sOrion!5e0!3m2!1svi!2sfi!4v1512917356387" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thea-price">
+                      <h2>Prices table</h2>
+                      <table class="table price-tab1">
+                        <thead>
+                          <tr>
+                            <th class="type-mov" rowspan="2">2D price</th>
+                            <th class="td-odd" colspan="3">Mon - Fri</th>
+                            <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                          </tr>
+                          <tr>
+                            <th class="td-odd">9h - 12h</th>
+                            <th class="td-even">Before 17h</th>
+                            <th class="td-odd">After 17h</th>
+                            <th class="td-even">9h - 12h</th>
+                            <th class="td-odd">Before 17h</th>
+                            <th class="td-even">After 17h</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="bor-row">
+                            <td class="td-odd">Adult</td>
+                            <td>10.00</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>18.99</td>
+                          </tr>
+                          <tr class="bor-row">
+                            <td class="td-odd">Children</td>
+                            <td>8.00</td>
+                            <td>10.20</td>
+                            <td>10.20</td>
+                            <td colspan="3">12.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class='table price-tab2'>
+                        <tr>
+                          <th class="type-mov" rowspan="2">3D price</th>
+                          <th class="td-odd" colspan="3">Mon - Fri</th>
+                          <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                        </tr>
+                        <tr>
+                          <th class="td-odd">9h - 12h</th>
+                          <th class="td-even">Before 17h</th>
+                          <th class="td-odd">After 17h</th>
+                          <th class="td-even">9h - 12h</th>
+                          <th class="td-odd">Before 17h</th>
+                          <th class="td-even">After 17h</th>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Adult</td>
+                          <td>12.20</td>
+                          <td>14.40</td>
+                          <td>18.50</td>
+                          <td>14.20</td>
+                          <td>18.50</td>
+                          <td>22.00</td>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Children</td>
+                          <td>9.00</td>
+                          <td>11.30</td>
+                          <td>11.30</td>
+                          <td colspan="3">13.00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!--Theaters 3 information-->
+                  <div class="theas hide-thea">
+                    <div class="thea-img">
+                      <img src="a3-theater.jpg" alt="">
+                    </div>
+                    <div class="thea-info">
+                      <div class="row">
+                        <div class="col-sm-6 thea-discr">
+                          <h5><a href="#">Kino Andorra</a></h5>
+                          <div class="info">
+                            <p><strong>Address: </strong>Elokuvateatteri Kino Eerikinkatu 11 00100 Helsinki</p>
+                            <p><strong>Tel: </strong>020 175 1620 (1,67 €/min + tele network charge)</p>
+                            <p>Mon-Fri 9-21, Sat 8-18, Sun 11-18</p>
+                          </div>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                          <a href="#" class="btn " role="button">Book now</a>
+                          <a href="#" class="btn " role="button">Scheduel</a>
+                        </div>
+                        <div class="col-sm-6 thea-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.828859762472!2d24.933173795534305!3d60.16701200187514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcb233c8bed%3A0xdf2b7d8abf433cd5!2sKino+Andorra!5e0!3m2!1svi!2sfi!4v1512917394468" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thea-price">
+                      <h2>Prices table</h2>
+                      <table class="table price-tab1">
+                        <thead>
+                          <tr>
+                            <th class="type-mov" rowspan="2">2D price</th>
+                            <th class="td-odd" colspan="3">Mon - Fri</th>
+                            <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                          </tr>
+                          <tr>
+                            <th class="td-odd">9h - 12h</th>
+                            <th class="td-even">Before 17h</th>
+                            <th class="td-odd">After 17h</th>
+                            <th class="td-even">9h - 12h</th>
+                            <th class="td-odd">Before 17h</th>
+                            <th class="td-even">After 17h</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="bor-row">
+                            <td class="td-odd">Adult</td>
+                            <td>10.00</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>12.20</td>
+                            <td>15.30</td>
+                            <td>18.99</td>
+                          </tr>
+                          <tr class="bor-row">
+                            <td class="td-odd">Children</td>
+                            <td>8.00</td>
+                            <td>10.20</td>
+                            <td>10.20</td>
+                            <td colspan="3">12.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class='table price-tab2'>
+                        <tr>
+                          <th class="type-mov" rowspan="2">3D price</th>
+                          <th class="td-odd" colspan="3">Mon - Fri</th>
+                          <th class="td-odd" colspan="3">Sat, Sun & Holiday</th>
+                        </tr>
+                        <tr>
+                          <th class="td-odd">9h - 12h</th>
+                          <th class="td-even">Before 17h</th>
+                          <th class="td-odd">After 17h</th>
+                          <th class="td-even">9h - 12h</th>
+                          <th class="td-odd">Before 17h</th>
+                          <th class="td-even">After 17h</th>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Adult</td>
+                          <td>12.20</td>
+                          <td>14.40</td>
+                          <td>18.50</td>
+                          <td>14.20</td>
+                          <td>18.50</td>
+                          <td>22.00</td>
+                        </tr>
+                        <tr class="bor-row">
+                          <td class="td-odd">Children</td>
+                          <td>9.00</td>
+                          <td>11.30</td>
+                          <td>11.30</td>
+                          <td colspan="3">13.00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div id="footer-part" class="container-fluid">
+        <!--Subcribe email-->
+        <div class="sub-email">
+          <div class="container">
+            <label class="label-sub">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              Subscribe to our newsletter to receive news, updates, and another stuff by email:
+            </label>
+            <div class="sub-input">
+              <input class="form-control" type="email" placeholder="Enter your email...">
+              <button type="button" class="btn">Subcribe</button>
+            </div>
+          </div>
+        </div>
+        <!--Contact information-->
+        <div class="container">
+          <div class="info">
+            <div class="social-contact">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="copyright">
+              <p>North Kino is proudly powered by WordPress Entries (RSS) and Comments (RSS) Privacy Policy</p>
+              <div class="logo">
+                <a href="#" class="direct-home">
+                  <i class="fa fa-ticket" aria-hidden="true"></i>
+                  <div class="logo-text">
+                    <span class="logo-name">North Kino</span>
+                    <span class="logo-slogan">The best online ticket store</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Scripts link-->
+    <script src="common-js.js" rel="stylesheet"></script>
+    <script src="theater-area.js" rel="stylesheet"></script>
+</html>
