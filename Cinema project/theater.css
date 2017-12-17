@@ -133,6 +133,9 @@
   width: inherit;
   height: 480px;
   overflow: hidden;
+  position: relative;
+  top: 480px;
+  opacity: 0;
 }
 
 #theater .thea-slide img {
@@ -147,6 +150,9 @@
   text-align: left;
   vertical-align: middle;
   margin-top: 42px;
+  top: -274px;
+  opacity: 0;
+  z-index: -1;
 }
 
 #theater .thea-slide .thea-info .col-sm-6 {

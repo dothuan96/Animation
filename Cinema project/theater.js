@@ -112,6 +112,10 @@ function left() { //only execute if the position of first image is negative, tha
         $('.icon-left').animate({opacity:'1', left: '0'}, 800);
         $('.icon-right').animate({opacity:'1', left: '0'}, 800);
         $(this).animate({opacity:'1', top: '0'}, 800);
+
+        $('.thea-img').animate({opacity:'1', top: '0'}, 800);
+        $('.thea-info').animate({opacity:'0', top: '-247px'}, 600);
+        $('.thea-info').animate({opacity:'1', top: '0'}, 800);
       }
   });
 
