@@ -422,3 +422,66 @@ select + .icon-select, .icon-select {
 #booking #ticket-info .apply-btn .btn {
   margin-top: 0;
 }
+
+#Payment .modal-content, #Payment .modal-header, #Payment .modal-footer, #Payment .modal-body {
+  background-color: #fff;
+  width: 628px;
+  color: #242829;
+}
+
+ #Payment h4 {
+   font-size: 36px;
+   line-height: 36px;
+   font-weight: 300;
+ }
+
+#Payment h6 {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+#Payment .card {
+  padding: 20px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+#Payment .card .form-group {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+#Payment .card .form-group label {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #242829;
+}
+
+#Payment .card .form-group select, #Payment .card .form-group input {
+  border: 2px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+#Payment .card .form-group select#sel1 {
+  position: relative;
+  float: left;
+  width: 40%;
+}
+
+#Payment .card .form-group select#sel2 {
+  position: relative;
+  float: right;
+  width: 40%;
+}
+
+#Payment .card img {
+  width: 80px;
+  height: auto;
+  margin-top: 18px;
+}
