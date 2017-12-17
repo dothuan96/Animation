@@ -100,7 +100,7 @@ function left() { //only execute if the position of first image is negative, tha
       if( bottom_of_window > top_of_object){
         $('.icon-left').animate({opacity:'1', left: '0'}, 800);
         $('.icon-right').animate({opacity:'1', left: '0'}, 800);
-        $(this).animate({opacity:'1', top: '0'}, 1000);
+        $(this).animate({opacity:'1', top: '0'}, 800);
       }
   });
 
