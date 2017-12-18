@@ -27,6 +27,7 @@
   width: inherit;
   height: auto;
   position: absolute;
+  cursor: pointer;
   left: 0;
   top: 0;
   transform: scale(1.1);
