@@ -30,5 +30,4 @@ function panelcur(m) {
   list_panel[n].classList.add('active'); console.log(n);
   panel_contents[n].classList.add('active');
   panel.style.height = panel_contents[n].offsetHeight + 'px';
-
 }
