@@ -78,6 +78,7 @@
   cursor: pointer;
   padding-left: 0;
   padding-right: 10px;
+  z-index: 1;
 }
 
 #movies .tab-all .col-sm-6.info {
@@ -86,7 +87,6 @@
   padding-left: 10px;
   left: -275px;
   opacity: 0;
-  z-index: -1;
 }
 
 #movies .tab-all img {
@@ -245,6 +245,11 @@
 
 #movies .tab-all .tab-pane {
   position: absolute;
+  z-index: -1;
+}
+
+#movies .tab-all .tab-pane.active {
+  z-index: 0;
 }
 
 #movies .tab-all .col-sm-6.pane-left.hide-pane, #movies .tab-all .col-sm-6.pane-right.hide-pane {
@@ -260,6 +265,6 @@
 #movies .tab-all .col-sm-6.pane-left.hide-pane.show-pane, #movies .tab-all .col-sm-6.pane-right.hide-pane.show-pane {
   width: auto;
   opacity: 1;
-  z-index: 1;
-  transform: rotateX(0deg);
+  z-index: 2;
+  transform: rotateY(0deg);
 }

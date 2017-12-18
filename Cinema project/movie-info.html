@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <meta charset="utf-8">
     <title>North Kino</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="common-ele.css">
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" type="text/css" href="footer.css">
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="movie-info.css">
   </head>
   <body>
     <!--Header-->
@@ -178,134 +178,165 @@
       </div>
     </header>
 
-
-    <!--Content-->
+    <!--Body part-->
     <main>
-      <div id="content-part" class="container-fluid">
-        <div class="content">
-          <!--Image slide show-->
-          <section class="movie-slide">
-            <div class="wallpaper">
-              <img class="slide" src="a1-slide.jpg" alt="">
-              <img class="slide" src="a2-slide.jpg" alt="">
-              <img class="slide" src="a3-slide.jpg" alt="">
-            </div>
-            <div class="container">
-              <div class="sm-wallpaper">
-                <div class="">
-                  <img class="image hide-top" onclick="currentSlide(1)" src="a1-slide.jpg" alt="">
-                </div>
-                <div class="">
-                  <img class="image hide-top" onclick="currentSlide(2)" src="a2-slide.jpg" alt="">
-                </div>
-                <div class="">
-                  <img class="image hide-top" onclick="currentSlide(3)" src="a3-slide.jpg" alt="">
-                </div>
+      <div id="movie-info" class="container-fluid">
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="img-bor">
+                <img src="002.jpg" alt="">
               </div>
             </div>
-          </section>
-          <!--Best movie-->
-          <section class="best-movie">
-            <div class="container">
-              <h2>Best Movie</h2>
-              <!--Row 1-->
-              <div class="row row-mov">
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="001.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Car 3</a></h5>
-                  <time datetime="2017-01-01">2017</time>
+            <div class="col-sm-8 info">
+              <h2 class="mov-title">King Arthur: Legend of the sword</h2>
+              <div class="tab-info">
+                <table class="table">
+                  <tr>
+                    <th style="width: 15%;">Showing:</th>
+                    <td>15/12/2017 - 29/12/2017</td>
+                  </tr>
+                  <tr>
+                    <th>Director:</th>
+                    <td>Guy Ritchie</td>
+                  </tr>
+                  <tr>
+                    <th>Writer:</th>
+                    <td>Joby Harold, Guy Ritchie </td>
+                  </tr>
+                  <tr>
+                    <th>Time:</th>
+                    <td>120 min</td>
+                  </tr>
+                  <tr>
+                    <th>Version:</th>
+                    <td>2D/3D English subtitle</td>
+                  </tr>
+                  <tr>
+                    <th>Studio:</th>
+                    <td>Panaroma</td>
+                  </tr>
+                  <tr>
+                    <th>Tags:</th>
+                    <td>Action, Adventure, Drama, Lengend</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="rate">
+                <ul class="inline-list">
+                  <li class="fa fa-star" aria-hidden="true"></li>
+                  <li class="fa fa-star" aria-hidden="true"></li>
+                  <li class="fa fa-star" aria-hidden="true"></li>
+                  <li class="fa fa-star" aria-hidden="true"></li>
+                  <li class="fa fa-star" aria-hidden="true"></li>
+                </ul>
+                <a href="booking.html" class="btn " role="button">Book now</a>
+                <a href="#" class="btn " role="button" data-toggle="modal" data-target="#Trailer">Trailer</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container describe">
+          <div class="row">
+            <div class="col-sm-3" style="padding-right: 0;">
+              <ul class="list-group tabs">
+                <li class="list-group-item li-panel active" onclick="panelcur(0)">
+                  <a>Description</a>
+                </li>
+                <li class="list-group-item li-panel" onclick="panelcur(1)">
+                  <a>Review (3)</a>
+                </li>
+                <li class="list-group-item li-panel" onclick="panelcur(2)">
+                  <a>More info</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-9" style="padding-left: 0;">
+              <div class="panels">
+                <div id="des-tab" class="panel-content active">
+                  <h4>King Arthur: Legend of the Sword</h4>
+                  <p>King Arthur: Legend of the Sword is a 2017 epic fantasy film written and directed by Guy Ritchie
+                    and co-written by Joby Harold and Lionel Wigram, inspired by Arthurian legends. The film stars Charlie Hunnam as the eponymous character,
+                     with Jude Law, Àstrid Bergès-Frisbey, Djimon Hounsou, Aidan Gillen and Eric Bana in supporting roles.[6]
+                      King Arthur premiered at the TCL Chinese Theater on May 8, 2017 and was theatrically released in 2D and RealD 3D on May 12,
+                       2017 in the United States and May 19, 2017 in the United Kingdom. The film grossed $148 million worldwide against its $175 million production budget, with critics "warning audiences to stay away".[7]
+                  </p>
+                  <img src="https://i.ytimg.com/vi/6rbPTQIdjmY/maxresdefault.jpg" alt="">
+                  <img src="https://virily.com/wp-content/uploads/2017/08/king-arthur-nine-clips.jpg" alt="">
                 </div>
-                <div class="col-sm-3">
-                  <a href="movie-info.html">
-                    <div class="img-bor">
-                      <img src="002.jpg" alt="">
+                <div id="rev-tab" class="panel-content">
+                  <div class="rev">
+                    <div class="row cmt">
+                      <div class="col-sm-2">
+                        <div class="img-bor">
+                          <img src="https://s-media-cache-ak0.pinimg.com/originals/38/3c/32/383c32b5d4d509f21b7fdbc26e8feec9.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="username">
+                          <h6>Michael J. Kael</h6>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Sed blandit massa vel mauris sollicitudin dignissim.
+                          Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim.
+                           Phasellus fringilla hendrerit lectus nec vehicula.
+                        </p>
+                      </div>
                     </div>
-                  </a>
-                  <h5><a href="movie-info.html">King Arthur</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="003.jpg" alt="">
+                    <div class="row cmt">
+                      <div class="col-sm-2">
+                        <div class="img-bor">
+                          <img src="https://data.whicdn.com/images/2925015/large.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="username">
+                          <h6>Edward D. Mile</h6>
+                          <ul class="inline-list">
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                            <li class="fa fa-star" aria-hidden="true"></li>
+                          </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Sed blandit massa vel mauris sollicitudin dignissim.
+                          Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Input part-->
+                    <div class="add-rev">
+                      <h4>Add a review</h4>
+                      <input type="text" class="form-control" id="usr" placeholder="Name*">
+                      <input type="text" class="form-control" id="usr" placeholder="Email*">
+                      <ul class="inline-list">
+                        <li class="fa fa-star-o" aria-hidden="true"></li>
+                        <li class="fa fa-star-o" aria-hidden="true"></li>
+                        <li class="fa fa-star-o" aria-hidden="true"></li>
+                        <li class="fa fa-star-o" aria-hidden="true"></li>
+                        <li class="fa fa-star-o" aria-hidden="true"></li>
+                      </ul>
+                      <textarea class="form-control" rows="4" id="comment">Your review</textarea>
+                      <button type="button" class="btn">Submit</button>
+                    </div>
                   </div>
-                  <h5><a href="#">Logan</a></h5>
-                  <time datetime="2017-01-01">2017</time>
                 </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="004.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Moana</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-              </div>
-              <!--Row 2-->
-              <div class="row row-mov">
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="005.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Jungle Book</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="006.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Kong! Skull island</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="007.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Zootopia</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="008.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Deadpool</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-              </div>
-              <!--Row 3-->
-              <div class="row row-mov">
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="009.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Ghost story</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="010.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Coco</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="011.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Wonder woman</a></h5>
-                  <time datetime="2017-01-01">2017</time>
-                </div>
-                <div class="col-sm-3">
-                  <div class="img-bor">
-                    <img src="012.jpg" alt="">
-                  </div>
-                  <h5><a href="#">Manchester</a></h5>
-                  <time datetime="2017-01-01">2017</time>
+                <div id="rev-tab" class="panel-content">
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -351,93 +382,23 @@
       </div>
     </footer>
 
-    <!--Sign in modal-->
-    <div id="Sign-in" class="modal fade">
+    <!--Modal-->
+    <!-- Trailer Modal -->
+    <div class="modal fade" id="Trailer">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
 
-          </div>
+          <!-- Modal body -->
           <div class="modal-body">
-            <div class="logo-part">
-              <i class="fa fa-ticket" aria-hidden="true"></i>
-            </div>
-            <input class="form-control" type="text" name="usernam" placeholder="User name">
-            <input class="form-control" type="password" name="pass" placeholder="Password">
-            <div class="btn-part">
-              <div class="signin-btn"><button class="btn" type="button" name="button">Sign in</button></div>
-              <a class="forgot-pass" href="#" data-dismiss="modal" data-toggle="modal" data-target="#Forgot-password">Forgot password?</a>
-              <div class="connect-social">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </div>
-            </div>
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/6rbPTQIdjmY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </div>
-          <div class="modal-footer">
 
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Sign up modal-->
-    <div id="Sign-up" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-
-          </div>
-          <div class="modal-body">
-            <div class="logo-part">
-              <i class="fa fa-ticket" aria-hidden="true"></i>
-            </div>
-            <input class="form-control" type="text" name="usernam" placeholder="User name">
-            <input class="form-control" type="email" name="usernam" placeholder="Email">
-            <input class="form-control" type="password" name="pass" placeholder="Password">
-            <input class="form-control" type="password" name="pass" placeholder="Repeat Password">
-            <div class="btn-part">
-              <div class="signin-btn"><button class="btn" type="button" name="button">Register</button></div>
-              <div class="connect-social">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Forgot password modal-->
-    <div class="modal fade" id="Forgot-password">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-
-          </div>
-          <div class="modal-body">
-            <div class="logo-part">
-              <i class="fa fa-ticket" aria-hidden="true"></i>
-            </div>
-            <input class="form-control" type="text" name="usernam" placeholder="User name">
-            <input class="form-control" type="text" name="usernam" placeholder="Email">
-            <div class="signin-btn"><button id="verify-btn" class="btn" type="button" name="button" onclick="show_verify()">Get verification link</button></div>
-            <div id="flip" class="notify-verification">
-              <div class="notify">
-                The verification has been sent! <br>
-                Please check your email.
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-
-          </div>
         </div>
       </div>
     </div>
 
     <!--Script link-->
     <script src="common-js.js" rel="stylesheet"></script>
-    <script src="home.js" rel="stylesheet"></script>
+    <script src="movie-info.js" rel="stylesheet"></script>
   </body>
 </html>

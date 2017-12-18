@@ -83,7 +83,7 @@
 }
 
 #content-part section.best-movie .img-bor {
-  width: inherit;
+  width: 100%;
   height: auto;
   position: relative;
   overflow: hidden;

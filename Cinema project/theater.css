@@ -118,6 +118,7 @@
   position: absolute;
   width: inherit;
   height: auto;
+  z-index: 3;
   transition: all 800ms cubic-bezier(0.685, 0.005, 0.335, 1.000);
 }
 
