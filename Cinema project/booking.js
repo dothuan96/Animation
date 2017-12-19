@@ -3,7 +3,7 @@ var promo_slide = document.getElementById('pro-sli');
 var images = document.getElementsByClassName('image');
 
 promo_slide.style.height = images[0].offsetHeight + 'px';
-setInterval(promo_animate, 4000);
+setInterval(promo_animate, 3000);
 
 function promo_animate() {
   for (var i = 0; i < images.length; i++) {
@@ -29,12 +29,12 @@ $('.col-sm-8.1').each( function(i){
       $('.select.5').animate({opacity:'0', left:'100px'}, 400*5);
       $('.select.6').animate({opacity:'0', left:'100px'}, 400*6);
 
-      $('.select.1').animate({opacity:'1', left:'0'}, 600);
-      $('.select.2').animate({opacity:'1', left:'0'}, 600);
-      $('.select.3').animate({opacity:'1', left:'0'}, 600);
-      $('.select.4').animate({opacity:'1', left:'0'}, 600);
-      $('.select.5').animate({opacity:'1', left:'0'}, 600);
-      $('.select.6').animate({opacity:'1', left:'0'}, 600);
+      $('.select.1').animate({opacity:'1', left:'0'}, 400);
+      $('.select.2').animate({opacity:'1', left:'0'}, 400);
+      $('.select.3').animate({opacity:'1', left:'0'}, 400);
+      $('.select.4').animate({opacity:'1', left:'0'}, 400);
+      $('.select.5').animate({opacity:'1', left:'0'}, 400);
+      $('.select.6').animate({opacity:'1', left:'0'}, 400);
     }
 });
 

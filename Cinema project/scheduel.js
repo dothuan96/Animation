@@ -116,8 +116,8 @@ $('.col-sm-8').each( function(i){
     /* If the object is completely visible in the window, fade it in */
     if( bottom_of_window > top_of_object){
       $(this).animate({opacity:'1'}, 800);
-      $('.mov, .mov.out, .mov.less').animate({opacity:'0', top:'-57px'}, 800);
-      $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 1000);
+      $('.mov, .mov.out, .mov.less').animate({opacity:'0', top:'-57px'}, 600);
+      $('.mov, .mov.out, .mov.less').animate({opacity:'1', top:'0'}, 600);
 
       $('p.1').animate({opacity:'0', left:'-162px'}, 600);
       $('p.2').animate({opacity:'0', left:'-162px'}, 600*2);
@@ -131,11 +131,11 @@ $('.col-sm-8').each( function(i){
       $('.select.3').animate({opacity:'0', left:'100px'}, 400*3);
       $('.select.4').animate({opacity:'0', left:'100px'}, 400*4);
       $('.select.5').animate({opacity:'0', left:'100px'}, 400*5);
-      $('.select.1').animate({opacity:'1', left:'0'}, 600);
-      $('.select.2').animate({opacity:'1', left:'0'}, 600);
-      $('.select.3').animate({opacity:'1', left:'0'}, 600);
-      $('.select.4').animate({opacity:'1', left:'0'}, 600);
-      $('.select.5').animate({opacity:'1', left:'0'}, 600);
+      $('.select.1').animate({opacity:'1', left:'0'}, 400);
+      $('.select.2').animate({opacity:'1', left:'0'}, 400);
+      $('.select.3').animate({opacity:'1', left:'0'}, 400);
+      $('.select.4').animate({opacity:'1', left:'0'}, 400);
+      $('.select.5').animate({opacity:'1', left:'0'}, 400);
     }
 });
 
@@ -146,7 +146,7 @@ $(window).scroll( function(){
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it in */
       if( bottom_of_window > top_of_object - 100){
-        $('.row-mov').animate({top:'0', opacity: '1'}, 1000);
+        $('.row-mov').animate({top:'0', opacity: '1'}, 800);
       }
   });
 });

@@ -40,10 +40,10 @@ $('.mov-title').each( function(i){
     /* If the object is completely visible in the window, fade it in */
     if( bottom_of_window > top_of_object + 100 ){
       //stage 1
-      $(this).animate({opacity:'0', left:'-700px'}, 1200);
-      $('.table').animate({opacity:'0', top:'-340px'}, 1200);
-      $('.star li.1, .star li.2, .star li.3, .star li.4, .star li.5').animate({opacity:'0'}, 1200);
-      $('.btn.1, .btn.2').animate({opacity:'0'}, 1200);
+      $(this).animate({opacity:'0', left:'-700px'}, 800);
+      $('.table').animate({opacity:'0', top:'-340px'}, 800);
+      $('.star li.1, .star li.2, .star li.3, .star li.4, .star li.5').animate({opacity:'0'}, 800);
+      $('.btn.1, .btn.2').animate({opacity:'0'}, 800);
       //stage 2
       $('img').animate({opacity:'1', top:'0'}, 800);
       $(this).animate({opacity:'1', left:'0'}, 800); console.log('a');
