@@ -1,5 +1,5 @@
 https://github.com/dothuan96/Animation
-#This is my README
+# This is my README
 
 This repository content all of basic exercises about HTML-CSS and Animation for Web Development.
 Code based on HTML and Javascript languages.
